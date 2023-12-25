@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data demonstrating</title>
+    <style>
+        .userInformation{
+            position: absolute;
+            left: 40%;
+            top: 40%;
+        }
+    </style>
+</head>
+<body>
+    <form method="get" action="">
+        <div class="userInformation">
+            <label for="usrNme">Enter Your Name</label>
+            <input type="text" name="usrNme">
+
+            <br>
+
+            <label for="genderSelection">Gender</label>
+            <input type="radio" name="genderSelection" value="male"> Male
+            <input type="radio" name="genderSelection" value="female"> Female
+
+            <br>
+
+            <label for="favSub">Favorite Subjects</label>
+            <input type="checkbox" name="favSub" value="Hindi"> Hindi
+            <input type="checkbox" name="favSub" value="English"> English
+            <input type="checkbox" name="favSub" value="Mathematics"> Mathematics
+            <input type="checkbox" name="favSub" value="Sanskrit"> Sanskrit
+
+            <br>
+
+            <label for="pswd">password</label>
+            <input type="password" name="pswd">
+
+            <br>
+
+            <label for="citySelect">Select City</label>
+            <select name="citySelect" id="">
+                <option value="Delhi">Delhi</option>
+                <option value="Indore">Indore</option>
+                <option value="Maanpur">Maanpur</option>
+                <option value="Mumbai">Mumbai</option>
+            </select>
+            <br>
+
+            <input type="submit">
+
+            <!-- http://127.0.0.1:5500/form.html?usrNme=Deepak+Patel&genderSelection=on&favSub=on&favSub=on&favSub=on&pswd=i+love+you&citySelect=Maanpur 
+            
+            
+            http://127.0.0.1:5500/form.html?usrNme=Deepak+Patel&genderSelection=male&favSub=Hindi&favSub=English&favSub=Mathematics&pswd=terahume&citySelect=Mumbai-->
+        </div>
+    </form>
+</body>
+</html>
