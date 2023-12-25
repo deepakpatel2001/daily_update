@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Report Card</title>
+</head>
+<body>
+    <h2>Go and watch the Console and sources tab.</h2>
+    <p>Here we are goint to understand the if else statements.</p>
+    <p>Sources tab is basically used fro the checking the specific condition of the code.</p>
+
+    <script type="text/javascript">
+        var studentName, studentNumber, studentGender, sub1, sub2, sub3, total, avg;
+
+        studentName = prompt("Please enter your name");
+        studentNumber = prompt("Please enter Student Number");
+        studentGender = prompt("Please enter Student Gender");
+        sub1 = prompt("Please enter Hinddi Numbers");
+        sub1 = parseInt(sub1);
+        sub2 = prompt("Please enter English Numbers");
+        sub2 = parseInt(sub2);
+        sub3 = prompt("Please enter Math Numbers");
+        sub3 = parseInt(sub3);
+
+        total = sub1 + sub2 + sub3;
+
+        avg = total / 3;
+
+        if(avg>33){
+            console.log(studentName + " Got Passed");
+        }
+
+        if(avg<33){
+            console.log(studentName + " Got failed");
+        }
+    </script>
+</body>
+</html>
