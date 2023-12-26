@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <h2>Fibonacci Series.</h2>
+
+    <script type="text/javascript">
+    var firstNumber = 0;
+    var secondNumber = 1;
+
+    for (var i = 2; i <= 9; i++) {
+        var sum = firstNumber + secondNumber;
+        firstNumber = secondNumber;
+        secondNumber = sum;
+    }
+
+    console.log(secondNumber);
+</script>
+
+</body>
+</html>

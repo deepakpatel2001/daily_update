@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>             
+</head>
+<body>
+    <h2>Armstrong Number</h2>
+
+    <script type="text/javascript">
+        var givenNmber = 153;
+        var number = givenNmber;
+        var duplicatesNumber = givenNmber;
+        var result = 0;
+        var sum = 0;
+
+        // counting digits
+        while(givenNmber>0){
+            result++;
+            givenNmber = parseInt(givenNmber/10);
+        }
+
+        // performing power function 
+        while(duplicatesNumber>0){
+            var reminder = duplicatesNumber%10;
+            sum = (sum + Math.pow(reminder, result));
+            duplicatesNumber = parseInt(duplicatesNumber/10);
+        }
+
+        console.log(sum);
+
+        if(number==sum){
+            console.log("It is pallindrome Number");
+        }else{
+            console.log("It is not a pallindrome number");
+        }
+    </script>
+</body>
+</html>
