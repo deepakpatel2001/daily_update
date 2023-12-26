@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator using Switch case statement.</title>
+</head>
+<body>
+    <h1>Go to console tab</h1>
+
+    <script type="text/javascript">
+        var firstNum = prompt("Enter first Number");
+        firstNum = parseInt(firstNum);
+        var secondNum = prompt("Enter second Number");
+        secondNum = parseInt(secondNum);
+
+        var result = prompt("Enter the case \n 1. Add \ 2. Sub \ 3. Mul \ 4. Divide")
+
+        switch (result) {
+            case "1":
+                var sum = firstNum + secondNum;
+                console.log("Sum is "+sum);
+                break;
+
+            case "2":
+                var sub = firstNum - secondNum;
+                console.log("subtraction is "+ sub);
+                break;
+
+            case "3":
+                var mul = firstNum * secondNum;
+                console.log("multiplication is "+mul);
+                break;
+
+            case "4":
+                var divide = firstNum / secondNum;
+                console.log("division is "+ divide);
+                break;
+            default:
+                console.log("Wrong option is choosen ");
+        }
+    </script>
+</body>
+</html>
