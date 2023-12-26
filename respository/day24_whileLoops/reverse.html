@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse the Digit of the Number</title>
+</head>
+<body>
+    <h3>Go to console.</h3>
+
+    <script type="text/javascript">
+        var number = 265641;
+        var container = 0;
+
+        while(number>0){
+            var reminder = number % 10;
+            container = (container*10) + reminder;
+            number = parseInt(number/10);
+        }
+
+        console.log(container);
+
+    </script>
+</body>
+</html>
