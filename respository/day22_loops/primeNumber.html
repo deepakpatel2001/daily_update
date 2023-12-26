@@ -12,10 +12,12 @@
         var number = prompt("Enter a number");
         number = parseInt(number);
         var count = 0;
+        var checkingLooopIteration = 0;
 
         for(var i=2; i<number; i++){
             if(number%i==0){
                 count++;
+                break;
             }
         }
         if(count>0){
@@ -23,7 +25,6 @@
         }else{
             console.log("This is a prime number");
         }
-
     </script>
 </body>
 </html>
