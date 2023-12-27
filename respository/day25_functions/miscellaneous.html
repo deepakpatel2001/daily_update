@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All about function.</title>
+</head>
+<body>
+    <script type="text/javascript">
+        console.log("Start");
+
+        var num1 = 34; // Global variable
+
+        console.log("first num1 printing " + num1);
+
+        function displayValue(){
+            var num2 = 98; // local\private variable
+            console.log("Inner second number is " + num2);
+            console.log("Inner function value is for num1 variable" + num1);
+
+            var num1 = 99;
+            console.log("created a new num1 variable in function and wnat to see that is this showing the global variable's value or will show the local variable's value" + num1);
+
+            num1 = 114;
+            console.log("Update value of num1 variable" + num1);
+        }
+
+        displayValue();
+        console.log("Accessing second number from outside of scope" + num2);
+        console.log("Accessing first number after function calling " + num1);
+
+        console.log("End");
+
+
+        // Output
+
+        /*
+        Start
+        miscellaneous.html:14 first num1 printing 34
+
+        miscellaneous.html:18 Inner second number is 98
+
+        miscellaneous.html:19 Inner function value is for num1 variable undefined
+
+        miscellaneous.html:22 created a new num1 variable in function and wnat to see that is this showing the global variable's value or will show the local variable's value99
+        
+        miscellaneous.html:25 Update value of num1 variable 114
+
+        miscellaneous.html:29 Uncaught ReferenceError: num2 is not defined
+            at miscellaneous.html:29:71
+        */
+    </script>
+</body>
+</html>

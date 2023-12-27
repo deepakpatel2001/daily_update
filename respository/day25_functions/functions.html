@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is functions.</title>
+</head>
+<body>
+    <script type="text/javascript">
+        console.log("start");
+        var num1 = 34; // Global variable
+
+        console.log("first num1 printing " + num1);
+
+        function displayValue(){
+            var num2 = 98; // local\private variable
+            console.log("Inner second number is " + num2);
+            console.log("Inner function value is for num1 variable" + num1);
+        }
+
+        displayValue();
+        console.log("Accessing second number from outside of scope" + num2);
+        console.log("Accessing first number after function calling " + num1);
+
+        console.log("End");
+
+        /*
+        start
+
+            functions.html:13 first num1 printing 34
+
+            functions.html:17 Inner second number is 98
+
+            functions.html:18 Inner function value is for num1 variable34
+
+            functions.html:22 Uncaught ReferenceError: num2 is not defined at functions.html:22:71
+            functions.html:55
+        */
+    </script>
+</body>
+</html>
