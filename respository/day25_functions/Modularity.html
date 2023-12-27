@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's understand the reason to use function and modularity</title>
+</head>
+<body>
+    <h3>Dekho bhai mere, mana ki function ka use hota hai baar baar ek code ko repeat karne ke liy, but bhai ek suno jab maan ke chalo student classwork me ho raha hai kaam to fir function ka use kyu hi karna hai?</h3>
+    <h4>Jawab ye hai ki ye to code ek chhota sa hai par dekho aage chalkar hame code 10K tak ho sakta hai to fir waha ye pata laga paane ki konsi line problem kar raha hai like avg nikaalne me kuch issue aa raha hai to fir usko kaise dhundhte firoge, wahi agar mene function ka use kiya to mujhe pata chal jaayega ki kaha or kis jagah ye code break ho raha hoga, isi chij ko hum <b>Modularity</b> kehte hia</h4>
+    <p>See the Modularity below to source tab of the dev tool..</p>
+    <script type="text/javascript">
+
+        var studentName, studentGender, studentAge, mark1, mark2, mark3, total, avg
+
+        console.log("Exection Started");
+
+        function userInput(){
+            studentName = prompt("Please enter your Name")
+            studentGender = prompt("Please enter your Gender")
+            studentAge = prompt("Please enter your Age")
+            studentAge = parseInt(studentAge)
+            var mark1 = prompt("Please enter your Hindi Marks")
+            mark1 = parseInt(mark1)
+            var mark2 = prompt("Please enter your English Marks")
+            mark2 = parseInt(mark2)
+            var mark3 = prompt("Please enter your Mathematics Marks")
+            mark3 = parseInt(mark3)            
+        }
+
+        function operation(){
+            var total = mark1 + mark2 + mark3
+            var avg = total / 3;
+        }
+        
+        function condition(){
+            if(avg>=40){
+            console.log("You got Distiction ");
+            }else{
+                console.log("Bro you just passed the exam...😊");
+            }
+        }
+
+        function displayValue(){
+            console.log("StudentName is " + studentName);
+            console.log("StudentGender is " + studentGender);
+            console.log("StudentAge is " + studentAge);
+            console.log("Total marks are " + total);
+            console.log("Average of marks is " + avg);
+        }     
+
+        userInput()
+        operation()
+        condition()
+        displayValue()
+
+        console.log("End");
+    </script>
+</body>
+</html>
