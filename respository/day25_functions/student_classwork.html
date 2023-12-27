@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept of Function and Modularity.</title>
+</head>
+<body>
+    <script type="text/javascript">
+        console.log("Started");
+
+        var studentName = prompt("Please enter your Name")
+        var studentGender = prompt("Please enter your Gender")
+        var studentAge = prompt("Please enter your Age")
+        studentAge = parseInt(studentAge)
+        var mark1 = prompt("Please enter your Hindi Marks")
+        mark1 = parseInt(mark1)
+        var mark2 = prompt("Please enter your English Marks")
+        mark2 = parseInt(mark2)
+        var mark3 = prompt("Please enter your Mathematics Marks")
+        mark3 = parseInt(mark3)
+
+        var total = mark1 + mark2 + mark3
+        var avg = total / 3;
+
+        console.log("StudentName is " + studentName);
+        console.log("StudentGender is " + studentGender);
+        console.log("StudentAge is " + studentAge);
+        console.log("Total marks are " + total);
+        console.log("Average of marks is " + avg);
+
+        if(avg>=40){
+            console.log("You got Distiction ");
+        }else{
+            console.log("Bro you just passed the exam...😊");
+        }
+
+        console.log("End");
+    </script>
+</body>
+</html>
