@@ -1,0 +1,61 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's understand the reason to use function and modularity</title>
+</head>
+<body>
+    <h2>Sara modularity hi hai ye, par yaha mene jana hai ki bhaiya hum function ke andar function pass kar sakte hia fir call ho jaayega, or second thing ke aap function calline ke sequence ko nahi badl sakte par ha aap badal skate ho initialization of the function can be see</h2>
+    <script type="text/javascript">
+
+        var studentName, studentGender, studentAge, mark1, mark2, mark3, total, avg
+
+        console.log("Exection Started");
+
+        function userInput(){
+            studentName = prompt("Please enter your Name")
+            studentGender = prompt("Please enter your Gender")
+            studentAge = prompt("Please enter your Age")
+            studentAge = parseInt(studentAge)
+            mark1 = prompt("Please enter your Hindi Marks")
+            mark1 = parseInt(mark1)
+            mark2 = prompt("Please enter your English Marks")
+            mark2 = parseInt(mark2)
+            mark3 = prompt("Please enter your Mathematics Marks")
+            mark3 = parseInt(mark3)
+
+            operation();
+        }
+
+        function operation(){
+            total = mark1 + mark2 + mark3
+            avg = total / 3;   
+            
+            condition();
+            displayValue()     
+        }
+        
+        function condition(){
+            if(avg>=40){
+            console.log("You got Distiction ");
+            }else{
+                console.log("Bro you just passed the exam...😊");
+            }
+
+        }
+
+        function displayValue(){
+            console.log("StudentName is " + studentName);
+            console.log("StudentGender is " + studentGender);
+            console.log("StudentAge is " + studentAge);
+            console.log("Total marks are " + total);
+            console.log("Average of marks is " + avg);
+        }     
+
+        userInput()
+
+        console.log("End");
+    </script>
+</body>
+</html>
