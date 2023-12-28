@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        displayInfo()
+        function displayInfo(){
+            console.log("It is simple first way to call the function and creation");
+        }
+
+        // second way is anonymous funcction
+
+        // functionExpressionVariable() this will show an error message
+        var functionExpressionVariable = function(){
+            console.log("Hey i'm functionExpressionExample ");
+        };
+
+        console.log(typeof(functionExpressionVariable));
+
+        functionExpressionVariable();
+    </script>
+</body>
+</html>
