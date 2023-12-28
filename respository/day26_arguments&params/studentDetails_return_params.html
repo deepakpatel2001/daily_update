@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's understand the reason to use function and modularity</title>
+</head>
+<body>
+    <h3>See ab ham dekh rahe hai ki kaise args pass hote hai or kaise return value kaam kar sakte hai is kaam me to chaliye shuru karte hai apna kaam</h3>
+    <script type="text/javascript">
+
+        console.log("Exection Started");
+
+        function userInput(){
+            var studentName, studentGender, studentAge, mark1, mark2, mark3
+            studentName = prompt("Please enter your Name")
+            studentGender = prompt("Please enter your Gender")
+            studentAge = prompt("Please enter your Age")
+            studentAge = parseInt(studentAge)
+            var mark1 = prompt("Please enter your Hindi Marks")
+            mark1 = parseInt(mark1)
+            var mark2 = prompt("Please enter your English Marks")
+            mark2 = parseInt(mark2)
+            var mark3 = prompt("Please enter your Mathematics Marks")
+            mark3 = parseInt(mark3)
+            
+            var avgResult = operation(mark1, mark2, mark3)
+
+
+            displayValue(studentName, studentGender, studentAge, avgResult)
+
+            condition(avgResult);
+
+        }
+
+        function operation(rmark1, rmark2, rmark3){
+            var total = rmark1 + rmark2 + rmark3
+            var avg = total / 3;
+            return avg;
+        }
+        
+        function condition(ravgResult){
+            if(ravgResult>=40){
+            console.log("You got Distiction ");
+            }else{
+                console.log("Bro you just passed the exam...😊");
+            }
+        }
+
+        function displayValue(rstudentName, rstudentGender, rstudentAge, ravgResult){
+            console.log("StudentName is " + rstudentName);
+            console.log("StudentGender is " + rstudentGender);
+            console.log("StudentAge is " + rstudentAge);
+            console.log("Average of marks is " + ravgResult);
+        }     
+
+        userInput()
+        // operation()
+        // condition()
+        // displayValue()
+
+        console.log("End");
+    </script>
+</body>
+</html>
