@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reason for args and params</title>
+</head>
+<body>
+    <h3>Dekho accessibility me problem tha to fir args and params ka concept aaya jaha hum apne specific variables ko bhejkar unke saath manipulation kar sakte hai aaram se.</h3>
+
+    <script type="text/javascript">
+        function readData(){
+            var num1, num2;
+
+            num1 = prompt("Enter number 1 ");
+            num1 = parseInt(num1);
+            console.log("Entered first number is " + num1);
+
+            num2 = prompt("Enter number 2 ");
+            num2 = parseInt(num2);
+            console.log("Entered second number is " + num2);
+            sum(num1, num2) // function arguments 
+        }
+
+        readData();
+
+        function sum(number1, number2) { // function parameters
+            var sum = number1 + number2;
+            console.log(sum);
+        }
+    </script>
+</body>
+</html>
