@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's understand the reason to use function and modularity</title>
+</head>
+<body>
+    <h3>See ab ham dekh rahe hai ki bhaiya hum return se 2 value kaise return kara sakte hai using the arrays</h3>
+    <script type="text/javascript">
+
+        console.log("Exection Started");
+
+        function userInput(){
+            var studentName, studentGender, studentAge, total, avg
+            studentName = prompt("Please enter your Name")
+            studentGender = prompt("Please enter your Gender")
+            studentAge = prompt("Please enter your Age")
+            studentAge = parseInt(studentAge)
+
+            var subjectLengths = prompt("Enter the length of the subject ")
+            subjectLengths = parseInt(subjectLengths);
+
+            var marks = []
+
+            for(var i=0; i<subjectLengths; i++){
+                marks[i] = prompt("Enter the marks of subject " + (i+1))
+                marks[i] = parseInt(marks[i])
+            }
+            
+            var avgResult = operation(marks)
+            avg = avgResult[0];
+            total = avgResult[1]
+
+            displayValue(studentName, studentGender, studentAge, avg, total)
+
+            condition(avg);
+
+        }
+
+        function operation(marks){
+            var newMarksArray = marks;
+            var total = 0;
+            for(var i=0; i<newMarksArray.length; i++){
+                total += newMarksArray[i]
+            }
+            var avg = total / marks.length;
+            return [avg, total]; // anonymous array
+        }
+        
+        function condition(ravgResult){
+            if(ravgResult>=40){
+            console.log("You got Distiction ");
+            }else{
+                console.log("Bro you just passed the exam...😊");
+            }
+        }
+
+        function displayValue(rstudentName, rstudentGender, rstudentAge, ravg, rtotal){
+            console.log("StudentName is " + rstudentName);
+            console.log("StudentGender is " + rstudentGender);
+            console.log("StudentAge is " + rstudentAge);
+            console.log("Average of marks is " + ravg);
+            console.log("Total marks is " + rtotal);
+        }     
+
+        userInput()
+
+        console.log("End");
+    </script>
+</body>
+</html>
