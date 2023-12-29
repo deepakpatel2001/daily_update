@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Write a programme to take array of values and return the sum of all even numbes under it.</h2>
+
+    <script type="text/javascript">
+        var arrayValues = [24, 11, 14, 18, 20];
+        var total = 0;
+
+        for(var i=0; i<arrayValues.length; i++){
+            if(arrayValues[i]%2 == 0){
+                total += arrayValues[i];
+            }
+        }
+
+        console.log(total);
+        console.log(arrayValues.length);
+    </script>
+</body>
+</html>
