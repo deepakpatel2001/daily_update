@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taking input </title>
+</head>
+<body>
+    <script type="text/javascript">
+        var inputLengthOfArray = prompt("Enter the length of the array")
+        inputLengthOfArray = parseInt(inputLengthOfArray);
+        console.log("LENGTH OF THE ARRAY IS " + inputLengthOfArray);
+        var arrayOfElements = [];
+
+        for(var i=0; i<inputLengthOfArray; i++) {
+            arrayOfElements[i] = prompt("Enter the " + i + " value");
+            arrayOfElements[i] = parseInt(arrayOfElements[i])
+        }
+
+        var resultArray = arrayOfElements;
+        for(var index = 0; index < resultArray.length; index++) {
+            console.log("The element of " + index + " is " + arrayOfElements[index]);
+        }
+    </script>
+</body>
+</html>
