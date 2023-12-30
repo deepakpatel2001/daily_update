@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pallindrome Checker</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var arr = [12,21,37,87,78,11]
+        var result = palindromeFinder(arr)
+
+        function palindromeFinder(arr) {
+            var newArray = [];
+            for(var i=0; i<arr.length; i++) {
+                var collector = 0;
+                while(arr[i]>0){
+                    var reminder = arr[i]%10;
+                    collector = (collector*10)+reminder;
+                    arr[i] = parseInt(arr[i]/10);
+                }
+
+                for(var j=i+1; j<arr.length; j++){
+                    if(arr[j]==collector){
+                        newArray.push(arr[i]);
+                    }
+                }
+            }
+            return newArray
+        }
+
+        for(var i=0; i<result.length; i++){
+            console.log(result[i]);
+        }
+    </script>
+</body>
+</html>
