@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecondLargest</title>
+</head>
+<body>
+    <h2>Write a programme to find the second largest number withing the array.</h2>
+
+    <script>
+        var arr = [12, 21, 37, 87, 78, 11];
+
+function findSecondLargest(arr) {
+    if (arr.length < 2) {
+        return "Array should have at least two elements";
+    }
+
+    var firstLargest = Math.max(arr[0], arr[1]);
+    var secondLargest = Math.min(arr[0], arr[1]);
+
+    for (var i = 2; i < arr.length; i++) {
+        if (arr[i] > firstLargest) {
+            secondLargest = firstLargest;
+            firstLargest = arr[i];
+        } else if (arr[i] > secondLargest && arr[i] !== firstLargest) {
+            secondLargest = arr[i];
+        }
+    }
+
+    return secondLargest;
+}
+
+var secondLargest = findSecondLargest(arr);
+console.log("Second Largest Element:", secondLargest);
+
+
+    </script>
+</body>
+</html>
