@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arguments Keywords.</title>
+</head>
+<body>
+    <h3>Jaise ki hame c, c++, java me function overloading and overriding ka concept rehta hai wo concept yaha support nahi karta javascript me. yaha agar aap ek function banaoge to wo do baar declare karne ki condition me hamesha niche waale ko operate karega for example cehck it out down.</h3>
+
+    <script type="text/javascript">
+        // function for the overloading and overriding concept learning
+        function argsFunction(){
+            console.log("FIrst function shoudl call");
+        }
+
+        function argsFunction(){
+            console.log("Second function will be calls");
+        }
+        argsFunction();
+
+        // understanding the concept of arguments
+        function findingSum(a, b){
+            var sum = a+b;
+            return sum
+        }
+
+        var sum = findingSum(15, 16)
+        console.log(sum);
+
+        // NaN understanding
+        function findingSum1(a, b, c){
+            var sum = a+b+c;
+            return sum
+        }
+        var sum = findingSum1(15, 16)
+        console.log(sum);
+
+        // 
+        function findingSum2(){
+            console.log(arguments)
+        }
+
+        findingSum2(15, 16, 17, 19, 19)
+
+
+        // Thsi is called the arguments keyword example
+        function findingSum3(){
+            var sum = 0;
+            for(var i=0; i<arguments.length; i++){
+                sum += arguments[i];
+            }
+            return sum;
+        }
+
+        var result = findingSum3(15, 16, 17, 19, 19)
+        console.log(result);
+    </script>
+</body>
+</html>
