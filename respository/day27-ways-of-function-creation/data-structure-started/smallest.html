@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    Write a programme to find the largest and smallest number within the array
+
+    <script type="text/javascript">
+        var arr = [56, 87, 90, 7, 34];
+
+        var smallestFunction = smllFn(arr)
+        var largestFunction = lrgtFn(arr)
+
+        function smllFn(arr){
+            var smallest = Number.MAX_VALUE;
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]<smallest){
+                    smallest = arr[i];
+                }
+            }
+            return smallest;
+        }
+
+        function lrgtFn(arr){
+            var largest = Number.MIN_VALUE;
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]>largest){
+                    largest = arr[i];
+                }
+            }
+            return largest;
+        }
+
+        console.log("small number is " + smallestFunction);
+        console.log("Largest number is " + largestFunction);
+
+    </script>
+</body>
+</html>
