@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        write a programme to read value into the array dynamically and list out armstrong within it
+    </h2>
+    
+    <script type="text/javascript">
+
+        var arr = [121, 153, 370, 570,]
+
+        var arrReturnValue = findingArmstrong(arr);
+
+        function findingArmstrong(arr){
+            var containerArray = []
+            for(var i=0; i<arr.length; i++){
+                var givenNmber = arr[i];
+                var number = givenNmber;
+                var duplicatesNumber = givenNmber;
+                var result = 0;
+                var sum = 0;
+
+                // counting digits
+                while(givenNmber>0){
+                    result++;
+                    givenNmber = parseInt(givenNmber/10);
+                }
+
+                // performing power function 
+                while(duplicatesNumber>0){
+                    var reminder = duplicatesNumber%10;
+                    sum = (sum + Math.pow(reminder, result));
+                    duplicatesNumber = parseInt(duplicatesNumber/10);
+                }
+
+                if(number==sum){
+                    containerArray.push(number)
+                }
+            }
+
+            return containerArray;
+        }
+
+        for(var i=0; i<arrReturnValue.length; i++){
+            console.log(arrReturnValue[i]);
+        }
+    </script>
+</body>
+</html>
