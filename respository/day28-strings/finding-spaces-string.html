@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding spaces in the string</title>
+</head>
+<body>
+    <h1>WAP to findout the total no. of Spaces within a Given String.</h1>
+
+    <script type="text/javascript">
+        var str = prompt("Enter the string as you want ")
+
+        var lengthfinder = str.split('')
+        console.log(lengthfinder);
+        var count = 0;
+
+        for(var i=lengthfinder.length; i>0; i--){
+            if(lengthfinder[i]==' '){
+                count++;
+            }
+        }
+
+        console.log(count);
+    </script>
+</body>
+</html>
