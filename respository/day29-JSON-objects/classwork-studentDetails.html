@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentDetals classwork</title>
+</head>
+<body>
+    <script>
+        var studentDetails = {
+            'sName' : "",
+            'sAge' : "",
+            'sAddress' : "",
+            'totalSubjects': "",
+            'sMarks' : [],
+            'sContactInformation': "",
+            'totalMarks' : 0,
+            'sAvg': ""
+            
+        }
+        studentDetails.sName = prompt("Enter Student Name");
+        studentDetails.sAge = prompt("Enter Student AGe");
+        studentDetails.sAge = parseInt(studentDetails.sAge);
+        studentDetails.sAddress = prompt("Enter Student Address");
+        studentDetails.totalSubjects = prompt("Enter the subject's number")
+        studentDetails.totalSubjects = parseInt(studentDetails.totalSubjects)
+        studentDetails.sContactInformation = prompt("Enter Student Phone number");
+        studentDetails.sContactInformation = parseInt(studentDetails.sContactInformation)
+
+        for(var i=0; i<studentDetails.totalSubjects; i++) {
+            studentDetails.sMarks[i] = prompt("Enter the element for index " + i)
+            studentDetails.sMarks[i] = parseInt(studentDetails.sMarks[i])
+        }
+
+        for(var i=0; i<studentDetails.sMarks.length; i++) {
+            studentDetails.totalMarks += studentDetails.sMarks[i]
+        }
+
+        studentDetails.sAvg = studentDetails.totalMarks/studentDetails.totalSubjects;
+        
+        console.log("Student Name is " + studentDetails.sName);
+        console.log("Student age is " + studentDetails.sAge);
+        console.log("Student address is " + studentDetails.sAddress);
+        console.log("Student contact number is " + studentDetails.sContactInformation);
+        console.log("Total Marks is " + studentDetails.totalMarks);
+        console.log("Average of marks is " + studentDetails.sAvg);
+
+    </script>
+</body>
+</html>
