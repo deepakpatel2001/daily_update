@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date objects</title>
+</head>
+<body>
+    <h1>Dates objects basically contain karke rakhta hai local machine ke sarre date functionality ko so that you can easily access the date functionality</h1>
+
+    <script type="text/javascript">
+        var dateInfo = new Date();
+
+        // var result = dateInfo.getDay()
+        console.log(dateInfo);
+
+        var day = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+        var month = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+
+        // all methods.
+
+        console.log(month[dateInfo.getMonth()]);
+        console.log(dateInfo.getDate()); 
+        console.log(day[dateInfo.getDay()])
+        console.log(dateInfo.getMinutes());
+        console.log(dateInfo.getFullYear());
+        console.log(dateInfo.getTime());
+
+
+    </script>
+</body>
+</html>

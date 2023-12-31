@@ -6,18 +6,23 @@
     <title>For in loop.</title>
 </head>
 <body>
-    <h1>Aaj hum dekhenge ki bhaiya kaise hum objects ke andar iterate hona padta hai par kaise karein ye dekhte hai ab</h1>
+    <h1>Aaj hum dekhenge ki, bhaiya kaise hum objects ke andar iterate karte hai so that ek saath value print ho jaaye</h1>
 
     <script type="text/javascript">
         var studentDetails = {
             'name': "Krishna",
             'age': 28,
-            'sId': 30025412363
+            'sId': 30025412363,
+            'marks' : [89,26,14,20]
         }
 
+        // accssing all the details
         for(var temp in studentDetails){
-            console.log(temp)
-            console.log(studentDetails[temp]);
+            if (temp === 'marks') {
+                for (var i = 0; i < studentDetails[temp].length; i++) {
+                        console.log(studentDetails[temp][i]);
+                    }
+            }            
         }
     </script>
 </body>
