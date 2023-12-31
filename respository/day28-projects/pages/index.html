@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding the flow of the position </title>
+    <style>
+        body{
+            background: url(https://images.pexels.com/photos/614484/pexels-photo-614484.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .header{
+            margin: 0 0;
+            max-width: 100%;
+            border: 2px solid black;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .contentContainer{
+            height: 75vh;
+            width: 100%;
+            border: 2px solid black;
+        }        
+
+        .passwordContainer{
+            margin-top: 15px;
+            width: 500px;
+            height: 300px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            position: relative;
+            top: 26%;
+            left: 31%;
+        }
+        .userPassword{
+            margin: 8px auto;
+            width: 390px;
+            height: 120px;
+        }
+        .userParent, .userPsdContainer{
+            position: relative;
+            top: 10px;
+            margin: 10px 0;
+            font: 700;
+            font-size: 20px;
+            padding: 10px;
+        }
+        .userParentPassword{
+            display: inline;
+            margin-left: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: center;
+        }
+        .inputText{
+            border: none;
+            outline: none;
+            font-weight: 900;
+        }
+        .btnLinks{
+            margin: 4px auto;
+            padding: 5px;
+            width: 390px;
+            height: 71px;
+            text-align: center;
+        }
+        .btn{
+            padding: 10px 15px;
+            font-weight: 700;
+            border-radius: 10px;
+        }
+        .btn1{
+            background-color: rgb(128, 49, 201);
+            color: yellow;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .btn2{
+            background-color: aqua;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .signUpBtn{
+            margin: 10px 0;
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+        }
+
+        .footer{
+            margin-top: 10px;
+            width: 100%;
+            height: 8vh;
+            border: 2px solid black;
+            text-align: center;
+            color: yellow;
+            font-size: 20px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Header Bro</h1>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="contentContainer">
+        <div class="passwordContainer">
+            <div class="userPassword">            
+                <div class="userParent">
+                    <label for="">Enter Username:</label>
+                    <div class="userParentPassword">
+                        <input type="text" name="" id="" class="inputText">
+                    </div>
+                </div>
+
+                <div class="userPsdContainer">
+                    <label for="">Enter Password:</label>
+                    <div class="userParentPassword">
+                        <input type="password" name="" id="" class="inputText">
+                    </div>
+                </div>
+            </div>
+            <div class="btnLinks">
+                <div class="logInBtn">
+                    <button class="btn btn1">Login</button>
+                </div>
+
+                <div class="signUpBtn">
+                    <button class="btn btn2">SignUp</button>
+                </div>
+
+                <div class="fgtPsd">
+                    <a href="#">Forget Password ?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>@Copryright reserved to Deepak Patel</p>
+    </div>
+</body>
+</html>
