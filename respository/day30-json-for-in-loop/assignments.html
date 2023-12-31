@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions on Date Objects</title>
+</head>
+<body>
+    <script>
+        var dateObject = new Date();
+
+        var day = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+        var month = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+
+        var halfYear = dateObject.getFullYear();
+
+        console.log(dateObject.getMonth() + "/" + dateObject.getDate() + "/" + halfYear.toString().slice(-2));
+
+        console.log( dateObject.getDate() + "/" +  dateObject.getMonth()  + "/" + halfYear.toString().slice(-2));
+
+        console.log( dateObject.getDate() + "/" +  dateObject.getMonth()  + "/" + halfYear);
+
+        // dateObject.setMonth(1)
+
+        console.log(day[dateObject.getDay()]+ ", " + dateObject.getMonth() + "st, " + dateObject.getFullYear());
+
+        console.log(month[dateObject.getMonth()] + " " + dateObject.getFullYear());
+
+        console.log(month[dateObject.getMonth()] + " " + dateObject.getMonth() + "th " + dateObject.getFullYear());
+
+        console.log(day[dateObject.getDay()] + " " + month[dateObject.getMonth()] + " " + dateObject.getFullYear());
+
+        console.log(month[dateObject.getMonth()] + " " + dateObject.getDate() + "st, " + dateObject.getFullYear() + " " + dateObject.getHours() + "hrs "  + dateObject.getMinutes() + "min");
+
+        console.log(dateObject.getHours()+":"+dateObject.getMinutes()+":"+dateObject.getSeconds());
+
+        console.log(dateObject.getDate() + "st, " + month[dateObject.getMonth()] + " " + dateObject.getFullYear() + ", " + dateObject.getHours()+":"+dateObject.getMinutes()+":"+dateObject.getSeconds());
+    </script>
+</body>
+</html>
