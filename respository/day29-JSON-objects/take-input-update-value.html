@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        console.log("Started ");
+        var jsonSyntax = {
+            "name": "",
+            "age": 23,
+            "marks": [90,98,97,95,99],
+            "pass": true
+        }
+
+        console.log(jsonSyntax);
+
+        jsonSyntax.name = prompt("Enter your Name") // taking dynamic data
+
+        console.log(jsonSyntax.name);
+
+        jsonSyntax.age = prompt("Update your Age Data") // updating age data to previous data
+        jsonSyntax.age = parseInt(jsonSyntax.age)
+
+        console.log(jsonSyntax.age);
+
+        for(var i=0; i<jsonSyntax.marks.length; i++){
+            console.log(jsonSyntax.marks[i]);
+        }
+
+        console.log("End");
+    </script>  
+</body>
+</html>
