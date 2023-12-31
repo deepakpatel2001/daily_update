@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <script type="text/javascript">
+            var empDetails = {
+                'empName' : "",
+                'empAge' : "",
+                'empAddress' : "",
+                'totalSallery': 0,
+                'contactNumber': 0,
+                'HRA': 0,
+                'PF' : 0,
+                'annualMoney': 0,
+                'totalSavedMoney':0
+            }
+            empDetails.empName = prompt("Enter Employee Name");
+            empDetails.empAge = prompt("Enter Employee Age");
+            empDetails.empAge = parseInt(empDetails.empAge);
+            empDetails.empAddress = prompt("Enter Employee Address");
+            empDetails.totalSallery = prompt("Enter the Employee's sallery")
+            empDetails.totalSallery = parseInt(empDetails.totalSallery)
+            empDetails.contactNumber = prompt("Enter Student Phone number");
+            empDetails.contactNumber = parseInt(empDetails.contactNumber)            
+
+            empDetails.annualMoney = empDetails.totalSallery*12;
+
+            empDetails.HRA = (empDetails.annualMoney*50)/100
+
+            empDetails.PF = (empDetails.annualMoney*24)/100
+
+            empDetails.totalSavedMoney = empDetails.HRA + empDetails.PF;
+
+            console.log("Employee Name is " + empDetails.empName);
+            console.log("EMployee age is " + empDetails.empAge);
+            console.log("emp address is " + empDetails.empAddress);
+            console.log("Employee total saller is " + empDetails.totalSallery);
+            console.log("emp contact number is " + empDetails.contactNumber);
+            console.log("Total annual income is " + empDetails.annualMoney);
+            console.log("HRA is " + empDetails.HRA);
+            console.log("Total PF will be " + empDetails.PF);
+            console.log("Total bachi khuchi paise " + empDetails.totalSavedMoney);
+
+            if (empDetails.annualMoney <= 250000) {
+            console.log("Don't need to pay any tax");
+            } else if (empDetails.annualMoney <= 500000) {
+                console.log("You need to pay tax " + 0.05 * (empDetails.annualMoney - 250000));
+            } else if (empDetails.annualMoney <= 1000000) {
+                console.log("You need to pay tax " + (0.05 * 250000 + 0.2 * (empDetails.annualMoney - 500000)));
+            } else {
+                console.log("You need to pay tax " + (0.05 * 250000 + 0.2 * 500000 + 0.3 * (empDetails.annualMoney - 1000000)));
+            }
+
+    </script>
+</body>
+</html>
