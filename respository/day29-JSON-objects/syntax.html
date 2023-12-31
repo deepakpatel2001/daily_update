@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax of JSON</title>
+</head>
+<body>
+    <h1>how json syntax look like 🤔 and how to access the data from the json objects</h1>
+
+    <script type="text/javascript">
+        console.log("Started ");
+        var jsonSyntax = {
+            "name": "Deepak",
+            "age": 23,
+            "marks": [90,98,97,95,99],
+            "pass": true
+        }
+
+        console.log(jsonSyntax);
+
+        console.log(jsonSyntax.name);
+
+        for(var i=0; i<jsonSyntax.marks.length; i++){
+            console.log(jsonSyntax.marks[i]);
+        }
+
+        console.log("End");
+    </script>
+</body>
+</html>
