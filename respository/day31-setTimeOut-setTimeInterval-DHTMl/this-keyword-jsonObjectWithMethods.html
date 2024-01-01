@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword and jsonObjectWithMethods</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var studentDetails = {
+            sName : "krishna",
+            sAge : "22",
+            marks : [98,96,94,92,94],
+            total : 0,
+            avg : 0,
+            grade : '',
+            getTotalMarks : function(){
+                for(var i=0; i<this.marks.length; i++){
+                    this.total += this.marks[i];
+                }
+                this.avg = this.total / this.marks.length;
+                this.getGrade()
+            },
+            getGrade : function(){
+                if(this.avg>=40){
+                    this.grade = "Passed"
+                }else{
+                    this.grade = "You have some surprise"
+                }
+            },
+            displayInformation : function(){
+                this.getTotalMarks();
+
+                console.log("Your Name is : " + this.sName);
+                console.log("Your Age is : " + studentDetails.sAge);
+                console.log("Your total is : " + this.total);
+                console.log("Your Average is : " + studentDetails.sAge);
+                console.log("Your Grade is : " + this.grade);
+            }
+        }
+
+        studentDetails.displayInformation()
+    </script>
+</body>
+</html>

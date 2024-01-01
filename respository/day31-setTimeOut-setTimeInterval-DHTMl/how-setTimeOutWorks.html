@@ -10,6 +10,7 @@
         console.log("Hello World let's start the Programme")
         console.log("Vaishnavi tum gandi ho");
 
+        //using the arrow function this way is called as the callback function
         setTimeout(() => {
             console.log("Deepak is hero aadmi");
         }, 2000);
@@ -23,6 +24,19 @@
         }
         
         console.log("Programmes ends today by here");
+
+        setTimeout(function(){
+            console.log("Ye example hai callback ka using the anonymous function");
+        }, 3500)
+
+        console.log("Regular function declaration in callbacks ends here");
+
+        // using passing as the argument
+
+        var first = 10
+        var second = 23;
+
+        var result = first + second;
         
     </script>
 </body>
