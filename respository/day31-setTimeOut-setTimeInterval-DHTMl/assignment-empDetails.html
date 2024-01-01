@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Details using the jsonObjectWithMethods</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+        var empDetails = {
+            empName: "",
+            empAge: "",
+            empAddress: "",
+            totalSallery: 0,
+            contactNumber: 0,
+            HRA: 0,
+            PF: 0,
+            annualMoney: 0,
+            totalSavedMoney: 0,
+            totalTax: 0,
+
+            readInput: function () {
+            this.empName = prompt("Enter Employee Name");
+            this.empAge = prompt("Enter Employee Age");
+            this.empAge = parseInt(this.empAge);
+            this.empAddress = prompt("Enter Employee Address");
+            this.totalSallery = prompt("Enter the Employee's sallery");
+            this.totalSallery = parseInt(this.totalSallery);
+            this.contactNumber = prompt("Enter Student Phone number");
+            this.contactNumber = parseInt(this.contactNumber);
+
+            this.calculateHraPf();
+            },
+            calculateHraPf: function () {
+            this.annualMoney = this.totalSallery * 12;
+
+            this.HRA = (this.annualMoney * 50) / 100;
+
+            this.PF = (this.annualMoney * 24) / 100;
+
+            this.totalSavedMoney = this.HRA + this.PF;
+
+            this.tax();
+            },
+            tax: function () {
+            if (empDetails.annualMoney <= 250000) {
+                this.totalTax = "No need to pay any tax ";
+            } else if (this.annualMoney <= 500000) {
+                this.totalTax =
+                "You need to pay tax " + 0.05 * (this.annualMoney - 250000);
+            } else if (this.annualMoney <= 1000000) {
+                this.totalTax =
+                "You need to pay tax " +
+                (0.05 * 250000 + 0.2 * (this.annualMoney - 500000));
+            } else {
+                this.totalTax =
+                "You need to pay tax " +
+                (0.05 * 250000 +
+                    0.2 * 500000 +
+                    0.3 * (this.annualMoney - 1000000));
+            }
+            },
+            displayInformation: function () {
+            this.readInput();
+            console.log("Employee Name is " + this.empName);
+            console.log("EMployee age is " + this.empAge);
+            console.log("emp address is " + this.empAddress);
+            console.log("Employee total saller is " + this.totalSallery);
+            console.log("emp contact number is " + this.contactNumber);
+            console.log("Total annual income is " + this.annualMoney);
+            console.log("HRA is " + this.HRA);
+            console.log("Total PF will be " + this.PF);
+            console.log("Total bachi khuchi paise " + this.totalSavedMoney);
+            },
+        };
+
+        empDetails.displayInformation();
+    </script>
+  </body>
+</html>
