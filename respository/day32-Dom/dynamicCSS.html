@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic css</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
-        .mainContainer{
-            height: 500px;
-            width: 500px;
-        }
+      .mainContainer {
+        width: 100%;
+        height: 500px;
+        border: 2px solid;
+      }
     </style>
-</head>
-<body>
-    <div class="mainContainer">
+  </head>
+  <body>
+    <!-- creating the element dynamically -->
+    <div class="mainContainer"></div>
 
-    </div>
     <script type="text/javascript">
-        var tagName = prompt("Enter your tag name ")
-        var tagValue = document.createElement(tagName)
-        tagValue.innerHTML = "Bhutni ke kuch to likh"
-        console.log(tagValue);
+      var takingInput = prompt("Enter you want to create a tag");
+      var tag = document.createElement(takingInput);
+      tag.innerHTML = "Hii everyone I'm a dynamic content";
+      tag.setAttribute("class", "dynamicClass");
+      tag.setAttribute("id", "dynamicClass");
+      tag.style.height = "350px";
+      tag.style.background = "cyan";
+      tag.style.border = "2px solid";
+      tag.style.width = "350px";
+      tag.style.margin = "10px";
+      tag.style.fontSize = "20px";
+      tag.style.fontWeight = "700";
+      tag.style.padding = "10px";
+      tag.style.textAlign = "center";
 
-        tagValue.setAttribute("class", "smallContainer");
-        tagValue.style.background = "red"
-        tagValue.style.width = "100%"
-
-        document.querySelector('.mainContainer').appendChild(tagValue);
+      document.querySelector(".mainContainer").appendChild(tag);
     </script>
-</body>
+  </body>
 </html>
