@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>understanding about the dynamicness</title>
+    <style>
+        .mainContainer{
+            height: 500px;
+            width: 500px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+        
+    </div>
+
+    <script>
+        var superContainer = document.querySelector(".mainContainer");
+
+        var selectionDropdown = document.createElement("select")
+        selectionDropdown.setAttribute("name", "Select State")
+
+        var options1 = document.createElement("option")
+        options1.setAttribute("value", "Maharashtra")
+        options1.innerHTML = "Maharashtra"
+        options1.style.color = "red"
+        options1.style.background = "cyan"
+        selectionDropdown.appendChild(options1)
+
+        var options2 = document.createElement("option")
+        options2.setAttribute("value", "Delhi")
+        options2.innerHTML = "Delhi"
+        selectionDropdown.appendChild(options2)
+
+        var options3 = document.createElement("option")
+        options3.setAttribute("value", "Kolkata")
+        options3.innerHTML = "Kolkata"
+        selectionDropdown.appendChild(options3)
+
+        var options4 = document.createElement("option")
+        options4.setAttribute("value", "pune")
+        options4.innerHTML = "Pune"
+        selectionDropdown.appendChild(options4)
+
+        var options5 = document.createElement("option")
+        options5.setAttribute("value", "indore")
+        options5.innerHTML = "Indore"
+        selectionDropdown.appendChild(options5)
+
+        console.log(selectionDropdown);
+
+        superContainer.appendChild(selectionDropdown)
+
+    </script>
+</body>
+</html>

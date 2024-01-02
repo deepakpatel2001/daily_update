@@ -8,20 +8,20 @@ var productInfo = [
       "https://m.media-amazon.com/images/I/81lK9ePIMtL._SX522_.jpg",
   },
   {
-    productName: "hp",
-    productActualPrice: 1000,
-    discountPercentage: 10,
-    productManufacturer: "Sony",
+    productName: "Quartz Watch",
+    productActualPrice: 8000,
+    discountPercentage: 12,
+    productManufacturer: "china",
     productImgUrl:
-      "https://m.media-amazon.com/images/I/81lK9ePIMtL._SX522_.jpg",
+      "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwe485817b/images/Titan/Catalog/1802NL02_1.jpg?sw=800&sh=800",
   },
   {
-    productName: "hp",
-    productActualPrice: 1000,
-    discountPercentage: 10,
-    productManufacturer: "Sony",
+    productName: "Xiaomi Tablet",
+    productActualPrice: 1600,
+    discountPercentage: 5,
+    productManufacturer: "Xioami",
     productImgUrl:
-      "https://m.media-amazon.com/images/I/81lK9ePIMtL._SX522_.jpg",
+      "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQRCBDGdiNZSvKBhsNHpDAthzqon4pXBQPy31a5ohmAlA7LbfQlutWqtDt2VFgbb1TS9jVQhwcMWeRW-yWhNf02c64mpaHHHTHatHxUbs7xwCAz7OurZrY6Wg",
   },
 ];
 
