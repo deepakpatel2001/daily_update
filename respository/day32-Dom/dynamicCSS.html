@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic css</title>
+    <style>
+        .mainContainer{
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+
+    </div>
+    <script type="text/javascript">
+        var tagName = prompt("Enter your tag name ")
+        var tagValue = document.createElement(tagName)
+        tagValue.innerHTML = "Bhutni ke kuch to likh"
+        console.log(tagValue);
+
+        tagValue.setAttribute("class", "smallContainer");
+        tagValue.style.background = "red"
+        tagValue.style.width = "100%"
+
+        document.querySelector('.mainContainer').appendChild(tagValue);
+    </script>
+</body>
+</html>

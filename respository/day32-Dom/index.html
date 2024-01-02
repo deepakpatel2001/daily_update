@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector perfomance.</title>
+</head>
+<body>
+    <div>
+        Hi there i'm Deepak Patel what about you, <span></span>
+        Hi konsi class hai tumari, <span></span>
+        Hi there i'm Deepak Patel what about you, <span></span>
+    </div>
+
+    <script>
+        var value1 = prompt("Enter first Numer")
+        value1 = parseInt(value1)
+        var value2 = prompt("Enter second Numer")
+        value2 = parseInt(value2)
+        var result = value1 + value2
+
+        var classIS = "second"
+
+        document.querySelector("span").innerHTML = result
+    </script>
+</body>
+</html>
