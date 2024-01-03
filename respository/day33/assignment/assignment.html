@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator.</title>
+
+    <style>
+        .parentContainer{
+            width: 500px;
+            height: 50%;
+            border: 2px solid;
+            padding: 10px;
+        }
+        .parentOfLists{
+            border: 2px solid;
+            padding-inline-start: 0;
+        }
+        .parentOfLists li{
+            border: 2px solid;
+            background-color: #ccc;
+            list-style: none;
+            margin: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 17px;
+        }
+        .answerList{
+            display: none;
+        }
+        .btnList{
+            padding-inline-start: 0;
+            border: 2px solid;
+        }
+        .btnList li{
+            display: inline-block;
+            border: none;
+            margin-left: 10px;
+            padding: 5px 0;
+        }
+        .btn{
+            background-color: red;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .btn1{
+            background-color: cyan;
+            font-weight: 700;
+        }
+        .btn2{
+            background-color: rgb(255, 140, 0);
+            font-weight: 700;
+        }
+        .btn3{
+            background-color: rgb(0, 255, 34);
+            font-weight: 700;
+        }
+        .btn4{
+            background-color: rgb(98, 19, 112);
+            font-weight: 700;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="parentContainer">
+        <ul class="parentOfLists">
+            <li>
+                Enter the First Value
+                <input type="text" id="firstValue">
+            </li>
+            <li>
+                Enter the Second Value
+                <input type="text" id="secondValue">
+            </li>
+            <li>
+                <ul class="btnList">
+                    <li>
+                        <input type="button" value="Add" onclick="addition()" class="btn btn1">
+                    </li>
+                    <li>
+                        <input type="button" value="Subtraction" onclick="subtraction()" class="btn btn2">
+                    </li>
+                    <li>
+                        <input type="button" value="multiplication" onclick="mult()" class=" btn btn3">
+                    </li>
+                    <li>
+                        <input type="button" value="division" onclick="division()" class="btn btn4">
+                    </li>
+                </ul>
+            </li>
+            <li class="answerList">
+                
+            </li>
+        </ul>
+    </div>
+
+    <script>       
+
+        var addition = () => {
+
+            var answerList = document.querySelector('.answerList');
+            answerList.style.display = "block"
+            var frtVal = document.querySelector('#firstValue').value;
+            frtVal = parseInt(frtVal)
+            var scdVal = document.querySelector('#secondValue').value;
+            scdVal = parseInt(scdVal)
+
+            var sum = frtVal+scdVal
+
+            var resultSpan = document.createElement('span')
+            resultSpan.innerHTML = sum
+            answerList.appendChild(resultSpan)
+            answerList.innerHTML = "The sum is " + resultSpan.innerHTML
+        }
+        var subtraction = () => {
+
+            var answerList = document.querySelector('.answerList');
+            answerList.style.display = "block"
+            var frtVal = document.querySelector('#firstValue').value;
+            frtVal = parseInt(frtVal)
+            var scdVal = document.querySelector('#secondValue').value;
+            scdVal = parseInt(scdVal)
+
+            var sub = frtVal-scdVal
+
+            var resultSpan = document.createElement('span')
+            resultSpan.innerHTML = sub
+            answerList.appendChild(resultSpan)
+            answerList.innerHTML = "The subtraction is " + resultSpan.innerHTML
+        }
+        var mult = () => {
+
+            var answerList = document.querySelector('.answerList');
+            answerList.style.display = "block"
+            var frtVal = document.querySelector('#firstValue').value;
+            frtVal = parseInt(frtVal)
+            var scdVal = document.querySelector('#secondValue').value;
+            scdVal = parseInt(scdVal)
+
+            var mul = frtVal*scdVal
+
+            var resultSpan = document.createElement('span')
+            resultSpan.innerHTML = mul
+            answerList.appendChild(resultSpan)
+            answerList.innerHTML = "The multiplication is " + resultSpan.innerHTML
+        }
+        var division = () => {
+
+            var answerList = document.querySelector('.answerList');
+            answerList.style.display = "block"
+            var frtVal = document.querySelector('#firstValue').value;
+            frtVal = parseInt(frtVal)
+            var scdVal = document.querySelector('#secondValue').value;
+            scdVal = parseInt(scdVal)
+
+            var div = Math.floor(frtVal/scdVal)
+
+            var resultSpan = document.createElement('span')
+            resultSpan.innerHTML = div
+            answerList.appendChild(resultSpan)
+            answerList.innerHTML = "The division is " + resultSpan.innerHTML
+        }
+        
+    </script>
+</body>
+</html>
