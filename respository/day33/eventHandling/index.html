@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            height: 300px;
+            width: 300px;
+            margin: 10px;
+            text-align: center;
+            border: 1px solid;
+        }
+
+        .yellow{
+            background-color: yellow;
+            font-size: 20px;
+        }
+
+        .blue{
+            background-color: blue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block yellow" onmouseover="changeColorBlue()" onmouseout="getPreviousColor1()">
+        hi i'm your Yellow div
+    </div>
+
+    <div class="block blue" onmouseover="changeColorYellow()" onmouseout="getPreviousColor2()">
+         hi i'm your blue div
+    </div>
+
+    <script>
+        function changeColorBlue() {
+            var referenceYellow = document.querySelector('.yellow');
+            referenceYellow.style.backgroundColor = "blue"
+            referenceYellow.style.color = "white"
+        }
+
+        function getPreviousColor1() {
+            var referenceYellow = document.querySelector('.yellow');
+            referenceYellow.style.backgroundColor = "yellow"
+            referenceYellow.style.color = "black"
+        }
+
+        // scond div
+        function changeColorYellow() {
+            var referenceBlue = document.querySelector('.blue');
+            referenceBlue.style.backgroundColor = "yellow"
+            referenceBlue.style.color = "black"
+        }
+
+        function getPreviousColor2() {
+            var referenceBlue = document.querySelector('.blue');
+            referenceBlue.style.backgroundColor = "blue"
+            referenceBlue.style.color = "white"
+        }
+
+    </script>
+</body>
+</html>
