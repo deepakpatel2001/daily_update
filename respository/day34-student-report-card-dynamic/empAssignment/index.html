@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Student Report Card</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <ul class="parentList">
+        <li class="firstElement">Employee Data Report:</li>
+        <li>
+          <label for="empName">Enter Employee Name:</label>
+          <input type="text" name="empName" id="employeeName" />
+        </li>
+        <li>
+          Gender
+          <label for="empGender">Male</label>
+          <input type="radio" name="empGender" value="Male" />
+
+          <label for="empGender">Female</label>
+          <input type="radio" name="empGender" value="Female" />
+        </li>
+        <li>
+            <label for="age">Enter Your Age</label>
+            <input type="text" name="age" id="empAge">
+        </li>
+        <li>
+            <label for="contInfo">Contact Number</label>
+            <input type="text" name="contInfo" id="contactInformation">
+        </li>
+        <li>
+            <label for="addr">Address</label>
+            <input type="text" name="addr" id="addressInfo">
+        </li>
+        <li>
+          <label for="empDepartment">Department:</label>
+          <select name="empDepartment" id="empDept">
+            <option value="Development_Department" id="deDe">Development Dept.</option>
+            <option value="Marketing_Dept" id="maDe">Marketing Dept.</option>
+            <option value="Sales_Dept" id="saDe">Sales Dept.</option>
+            <option value="Staff_Dept" id="stDe">Staff Dept.</option>
+          </select>
+        </li>
+        <li>
+            <label for="employeeID">Employee ID</label>
+            <input type="text" name="employeeID" id="empId">
+        </li>
+        <li>
+            <label for="sallery">Basic Sallery</label>
+            <input type="text" name="sallery" id="basicSallery">
+        </li>
+        
+        <li class="btnList">
+          <button class="generateBtn" onclick="callingDataFunction()">
+            Get Payment receipt
+          </button>
+        </li>
+      </ul>
+
+      <ul class="answerListA parentList">
+        <li class="firstElement">Employee Payment receipt</li>
+        <li>
+        <li>Employee Name is <span id="nameSpan">..</span></li>
+        <li>Employee Gender  is <span id="genderSpan">..</span></li>
+        <li>Employee Age is <span id="ageSpan">..</span></li>
+        <li>Employee contact number is <span id="contactSpan">..</span></li>
+        <li>Employee Address is <span id="addressSpan"></span></li>
+        <li>Employee Department is <span id="departmentSpan"></span></li>
+        <li>Employee Basic sallery is <span id="basicSallerySpan"></span></li>
+        <li>Employee total sallery is <span id="totalSallerySpan"></span></li>
+        <li>Employee HRA is <span id="hraSpan"></span></li>
+        <li>Employee PF is <span id="pfSpan"></span></li>
+        <li>Employee Saved is <span id="savedSpan"></span></li>
+        <li>Employee employeeTax is <span id="taxSpan"></span></li>
+      </ul>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

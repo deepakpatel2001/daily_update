@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer{
+    width: 600px;
+    margin: 10px auto;
+}
+
+.parentList{
+    border: 2px solid black;
+    box-shadow: 0 0 40px 0 rgba(0,0,0,.45);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.answerListA{
+    margin-top: 30px;
+    box-shadow: none;
+    display: none;
+}
+
+.parentList li{
+    list-style: none;
+    background-color: #ccc;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 15px 20px;
+    border: 2px solid;
+    padding: 10px;
+}
+
+.firstElement{
+    text-align: center;
+    color: rgb(0, 13, 255);
+    background-color: rgb(255, 255, 255)!important;
+}
+
+.parentList .marksData{
+    border: 2px solid;
+    padding: 10px 0;
+    margin: 10px 20px;
+}
+
+.subMarksClass li{
+    display: inline-block;
+    border: none;
+    margin: 0;
+}
+
+.subMarksClass li input{
+    width: 50px;
+    background-color: #ccc;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btnList{
+    text-align: center;
+}
+
+.generateBtn{
+    padding: 8px ;
+    background-color: aqua;
+    font-weight: 800;
+    font-family: cursive, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+}
