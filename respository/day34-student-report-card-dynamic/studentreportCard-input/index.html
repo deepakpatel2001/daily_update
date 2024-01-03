@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Student Report Card</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <ul class="parentList">
+        <li class="firstElement">Student Data Report Card</li>
+        <li>
+          <label for="sName">Enter Student Name:</label>
+          <input type="text" name="sName" id="stuName" />
+        </li>
+        <li>
+          Gender
+          <label for="sGender">Male</label>
+          <input type="radio" name="sGender" value="Male" />
+
+          <label for="sGender">Female</label>
+          <input type="radio" name="sGender" value="Female" />
+        </li>
+        <li>
+          <label for="schoolClass">Class:</label>
+          <select name="schoolClass" id="stuID">
+            <option value="Class 09" id="class 09">Class 09</option>
+            <option value="Class 10" id="class 10">Class 10</option>
+            <option value="Class 11" id="class 11">Class 11</option>
+            <option value="Class 12" id="class 12">Class 12</option>
+          </select>
+        </li>
+        <li class="marksData">
+          <ul class="subMarksClass">
+            <li>Marks</li>
+            <li><input type="text" id="m1" /></li>
+            <li><input type="text" id="m2" /></li>
+            <li><input type="text" id="m3" /></li>
+            <li><input type="text" id="m4" /></li>
+            <li><input type="text" id="m5" /></li>
+          </ul>
+        </li>
+        <li class="btnList">
+          <button class="generateBtn" onclick="callingDataFunction()">
+            Generate report card
+          </button>
+        </li>
+      </ul>
+
+      <ul class="answerListA parentList">
+        <li>Your Name is <span id="nameSpan">..</span></li>
+        <li>Your Gender  is <span id="genderSpan">..</span></li>
+        <li>Your Class is <span id="classSpan">..</span></li>
+        <li>your total marks are <span id="totalSpan">..</span></li>
+        <li>your avg is <span id="avgSpan"></span></li>
+      </ul>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
