@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+.modularity{
+  float: left;
+  border: 2px solid;
+}
+
+.modularity2{
+  border: 2px solid black;
+}
+
 .mainContainer {
   width: 600px;
   margin: 10px auto;
@@ -14,6 +23,7 @@
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.45);
   font-weight: 700;
   font-size: 20px;
+  border-radius: 5px;
 }
 
 .answerListA {
@@ -57,6 +67,12 @@
   border: 2px solid;
   padding: 10px 0;
   margin: 10px 20px;
+}
+
+input[type="text"]{
+  font-size: 18px;
+  padding: 0 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .subMarksClass li {
