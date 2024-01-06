@@ -28,10 +28,12 @@ var countryTextField = document.createElement("ul");
 countryTextField.setAttribute("class", "countryTextFieldUl");
 
 var countryTextFieldLabel = document.createElement("li");
+countryTextFieldLabel.setAttribute("class", "countryTextFieldLabel");
 countryTextFieldLabel.innerHTML = "Address";
 
 var countryTextFieldTextArea = document.createElement("li");
 var countryTextFieldTextAreaEl = document.createElement("textarea");
+countryTextFieldTextAreaEl.setAttribute("class", "countryTextFieldTextAreaEl");
 countryTextFieldTextArea.appendChild(countryTextFieldTextAreaEl);
 
 countryTextField.appendChild(countryTextFieldLabel);
@@ -43,10 +45,39 @@ var countryNameUl = document.createElement("ul");
 countryNameUl.setAttribute("class", "countryName");
 
 var countryNameList = document.createElement("li");
+countryNameList.setAttribute("class", "countryNameListlabel");
 countryNameList.innerHTML = "Select country";
 
 var countryNameSelectList = document.createElement("li");
 var countryDropdown = document.createElement("select");
+countryDropdown.setAttribute("class", "countryDropdown");
+
+// state
+var stateNameUl = document.createElement("ul");
+stateNameUl.setAttribute("class", "stateName countryName");
+
+var stateNameList = document.createElement("li");
+stateNameList.setAttribute("class", "stateNameList countryNameListlabel");
+stateNameList.innerHTML = "Select State";
+
+var stateNameSelectList = document.createElement("li");
+var stateDropdown = document.createElement("select");
+stateDropdown.setAttribute("class", "stateDropdown countryDropdown");
+stateDropdown.style.width = "120px";
+
+// district variables
+var districtNameUl = document.createElement("ul");
+districtNameUl.setAttribute("class", "districtName countryName");
+
+var districtLabel = document.createElement("li");
+districtLabel.setAttribute("class", "districtLabel countryNameListlabel");
+districtLabel.innerHTML = "Select District";
+
+var districtNameSelectList = document.createElement("li");
+var districtDropdown = document.createElement("select");
+districtDropdown.setAttribute("class", "districtDropdown countryDropdown");
+districtDropdown.setAttribute("id", "districtSelected");
+districtDropdown.style.width = "120px";
 
 var idVal;
 for (var i = 0; i < country.length; i++) {
@@ -63,6 +94,18 @@ for (var i = 0; i < country.length; i++) {
 countryNameUl.appendChild(countryNameList);
 countryNameUl.appendChild(countryNameSelectList);
 refMainContainer.appendChild(countryNameUl);
+
+// appending happening
+
+stateNameSelectList.append(stateDropdown);
+stateNameUl.appendChild(stateNameList);
+stateNameUl.appendChild(stateNameSelectList);
+refMainContainer.appendChild(stateNameUl);
+
+districtNameSelectList.appendChild(districtDropdown);
+districtNameUl.appendChild(districtLabel);
+districtNameUl.appendChild(districtNameSelectList);
+refMainContainer.appendChild(districtNameUl);
 
 // * State Information
 
@@ -178,15 +221,6 @@ var stateInfo = {
     },
   ],
 };
-var stateNameUl = document.createElement("ul");
-stateNameUl.setAttribute("class", "stateName");
-
-var stateNameList = document.createElement("li");
-stateNameList.innerHTML = "Select State";
-
-var stateNameSelectList = document.createElement("li");
-var stateDropdown = document.createElement("select");
-stateDropdown.style.width = "120px";
 
 var stateOption;
 
@@ -196,6 +230,7 @@ var indiaCount;
 document.querySelector("#country1").addEventListener("click", () => {
   indiaCount = 1;
   stateDropdown.innerHTML = "";
+
   for (var key in stateInfo.indiaState) {
     stateOption = document.createElement("option");
     indiaId = "#indiaId" + indiaCount;
@@ -204,6 +239,52 @@ document.querySelector("#country1").addEventListener("click", () => {
     stateOption.innerHTML = stateInfo.indiaState[key].value;
     stateDropdown.append(stateOption);
   }
+
+  var districtOption;
+  document.getElementById("#indiaId1").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[0].indiaDisrict.andPra[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+
+  document.getElementById("#indiaId2").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[0].indiaDisrict.madPra[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+
+  document.getElementById("#indiaId3").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[0].indiaDisrict.utrPra[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+
+  document.getElementById("#indiaId4").addEventListener("click", () => {
+     districtDropdown.innerHTML = "";
+     for (var index = 0; index < 5; index++) {
+       districtOption = document.createElement("option");
+       districtOption.innerHTML = districtInfo[0].indiaDisrict.asmr[index];
+       districtDropdown.appendChild(districtOption);
+     }
+   });
+
+  document.getElementById("#indiaId5").addEventListener("click", () => {
+      districtDropdown.innerHTML = "";
+      for (var index = 0; index < 5; index++) {
+        districtOption = document.createElement("option");
+        districtOption.innerHTML = districtInfo[0].indiaDisrict.bir[index];
+        districtDropdown.appendChild(districtOption);
+      }
+    });
 });
 
 var americaId;
@@ -220,6 +301,46 @@ document.querySelector("#country2").addEventListener("click", () => {
     stateOption.innerHTML = stateInfo.americaState[key].value;
     stateDropdown.append(stateOption);
   }
+  document.getElementById("#americaId1").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[1].usaDisrict.Alabama[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+  document.getElementById("#americaId2").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[1].usaDisrict.Alabama[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+  document.getElementById("#americaId3").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[1].usaDisrict.Alaska[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+  document.getElementById("#americaId4").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[1].usaDisrict.Arkansas[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+  document.getElementById("#americaId5").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[1].usaDisrict.Delaware[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
 });
 
 var indonesiaId;
@@ -236,11 +357,58 @@ document.querySelector("#country3").addEventListener("click", () => {
     stateOption.innerHTML = stateInfo.indonesiaState[key].value;
     stateDropdown.append(stateOption);
   }
+
+  document.getElementById("#indonesiaId1").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML =
+        districtInfo[2].indoDisrict.Highland_Papua[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+
+  document.getElementById("#indonesiaId2").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML =
+        districtInfo[2].indoDisrict.Southwest_Papua[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+
+  document.getElementById("#indonesiaId3").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[2].indoDisrict.West_Papua[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+
+  document.getElementById("#indonesiaId4").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[2].indoDisrict.South_Papua[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+
+  document.getElementById("#indonesiaId5").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML =
+        districtInfo[2].indoDisrict.DeNorth_Sumatra[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
 });
 
-
 var russiaId;
-var russiaCount
+var russiaCount;
 document.querySelector("#country4").addEventListener("click", () => {
   russiaCount = 1;
   stateDropdown.innerHTML = "";
@@ -252,10 +420,54 @@ document.querySelector("#country4").addEventListener("click", () => {
     stateOption.innerHTML = stateInfo.rusriaState[key].value;
     stateDropdown.append(stateOption);
   }
+  document.getElementById("#russiaId1").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML =
+        districtInfo[3].russiaDisrict.Arkhangelsk[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+  document.getElementById("#russiaId2").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML =
+        districtInfo[3].russiaDisrict.Bashkortostan[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+  document.getElementById("#russiaId3").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML =
+        districtInfo[3].russiaDisrict.Chelyabinsk[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+  document.getElementById("#russiaId4").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[3].russiaDisrict.Dagestan[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+  document.getElementById("#russiaId5").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML =
+        districtInfo[3].russiaDisrict.Ingushetiya[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
 });
 
-var japanId
-var japanCount
+var japanId;
+var japanCount;
 
 document.querySelector("#country5").addEventListener("click", () => {
   japanCount = 1;
@@ -268,12 +480,47 @@ document.querySelector("#country5").addEventListener("click", () => {
     stateOption.innerHTML = stateInfo.japanState[key].value;
     stateDropdown.append(stateOption);
   }
+  document.getElementById("#japanId1").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[4].japanDisrict.Hokkaido[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+  document.getElementById("#japanId2").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[4].japanDisrict.Kyushu[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+  document.getElementById("#japanId3").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[4].japanDisrict.Shikoku[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+  document.getElementById("#japanId4").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[4].japanDisrict.Kanto[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
+  document.getElementById("#japanId5").addEventListener("click", () => {
+    districtDropdown.innerHTML = "";
+    for (var index = 0; index < 5; index++) {
+      districtOption = document.createElement("option");
+      districtOption.innerHTML = districtInfo[4].japanDisrict.Niigata[index];
+      districtDropdown.appendChild(districtOption);
+    }
+  });
 });
-
-stateNameSelectList.append(stateDropdown);
-stateNameUl.appendChild(stateNameList);
-stateNameUl.appendChild(stateNameSelectList);
-refMainContainer.appendChild(stateNameUl);
 
 var districtInfo = [
   {
@@ -329,27 +576,14 @@ var districtInfo = [
   },
 ];
 
-var districtNameUl = document.createElement("ul");
-districtNameUl.setAttribute("class", "districtName");
-
-var districtNameList = document.createElement("li");
-districtNameList.innerHTML = "Select District";
-
-var districtNameSelectList = document.createElement("li");
-var districtDropdown = document.createElement("select");
-
-districtDropdown.style.width = "120px";
-
-var districtOption;
-districtNameSelectList.appendChild(districtDropdown);
-districtNameList.appendChild(districtNameSelectList)
-districtNameUl.appendChild(districtNameList)
-refMainContainer.appendChild(districtNameUl);
-
-document.querySelector("#indiaId1").addEventListener("change", () => {
-  for (var index = 0; index < 5; index++) {
-    districtOption = document.createElement("option");
-    districtOption.innerHTML = districtInfo[0].indiaDisrict.andPra[index];
-    districtDropdown.appendChild(districtOption);
-  }
-});
+// document
+//   .querySelector("#districtSelected")
+//   .addEventListener("change", function (event) {
+//     if (event.target.id === "indiaId1") {
+//       for (var index = 0; index < 5; index++) {
+//         districtOption = document.createElement("option");
+//         districtOption.innerHTML = districtInfo[0].indiaDisrict.andPra[index];
+//         districtDropdown.appendChild(districtOption);
+//       }
+//     }
+//   });
