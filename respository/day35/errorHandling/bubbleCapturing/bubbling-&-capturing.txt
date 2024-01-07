@@ -1,0 +1,15 @@
+Bubbling -----
+
+see there is noting big thing in the event bubbling behavior actually it is just a topic related when the two divs parent child type then when the parent get clicked then the user will see that the parent only get clicked but when the child got clicked then the user will see that the parent first got clicked and then child was clicked.
+
+---------------------------------------------------------------------------------------------------------
+
+Capturing -------
+
+See it is just opposite to the bubling because when the child go clicked then the user will see that the child got clicked and then the parent got clicked 
+
+---------------------------------------------------------------------------------------------------------
+
+Exceptions ------
+
+Actually if you want that wehne you click on the child div then it will so only then you have to add some conditions for it to resovlve the problem.
