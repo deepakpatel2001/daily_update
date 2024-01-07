@@ -8,8 +8,66 @@
     width: 500px;
     border: 2px solid;
     margin: 20px auto;
+    height: 210px;
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
 }
 
+.nameUl, .ageUl, .genderUl, .countryUl{
+    list-style: none;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.ageUl{
+    margin-top: 10px;
+}
+
+input{
+    font-size: 22px;
+    margin-left: 10px;
+}
+.editButton, .deleteButton{
+    padding: 0 7px;
+    background-color: aqua;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.deleteButton{
+    background-color: rgb(239, 85, 42);
+    margin-right: 0;
+    margin-left: 5px;
+}
+select{
+    font-size: 20px;
+}
+
+.nameLabel, .ageLabel, .genderLabel, .countryLabel{
+    float: left;
+}
+
+.marginSpace{
+    margin-left: 10px!important;
+}
+
+.sbtBtnUl{
+    float: right;
+    list-style: none;
+}
+
+.submitButtonImp{
+    font-size: 18px;
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid ;
+    background-color: aqua;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* table Information */
 .formTable{
     width: 80%;
     height: 500px;

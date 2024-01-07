@@ -2,33 +2,61 @@ var mainContainer = document.querySelector(".formInformation");
 
 // Name ul
 var nameUl = document.createElement("ul");
+nameUl.setAttribute("class", "nameUl");
+
 var nameLabel = document.createElement("li");
-nameLabel.innerHTML = "Name: ";
+nameLabel.setAttribute("class", "nameLabel");
+var spanElement = document.createElement("span");
+spanElement.innerHTML = "Name: "
+
+var nameParentList = document.createElement("li");
+nameParentList.setAttribute("class", "marginSpace");
+
 var nameInputList = document.createElement("input");
 nameInputList.setAttribute("id", "studentName");
 
+nameParentList.appendChild(nameInputList);
+nameLabel.appendChild(spanElement);
+
 nameUl.appendChild(nameLabel);
-nameUl.appendChild(nameInputList);
+nameUl.appendChild(nameParentList);
 mainContainer.appendChild(nameUl);
 
 // Age Ul
 var ageUl = document.createElement("ul");
+ageUl.setAttribute("class", "ageUl")
+
 var ageLabel = document.createElement("li");
-ageLabel.innerHTML = "Age: ";
+ageLabel.setAttribute("class", "ageLabel")
+var spanElement = document.createElement("span");
+spanElement.innerHTML = "Age: ";
+
+var ageParentList = document.createElement("li");
 var ageInputList = document.createElement("input");
 ageInputList.setAttribute("id", "sAge");
 ageInputList.setAttribute("placeholder", "29");
 
-nameUl.appendChild(ageLabel);
-nameUl.appendChild(ageInputList);
-mainContainer.appendChild(nameUl);
+ageParentList.appendChild(ageInputList);
+ageLabel.appendChild(spanElement);
+
+ageUl.appendChild(ageLabel);
+ageUl.appendChild(ageParentList);
+mainContainer.appendChild(ageUl);
 
 // Gender Selection
 var genderUl = document.createElement("ul");
+genderUl.setAttribute("class", "genderUl")
+
 var genderLabel = document.createElement("li");
-genderLabel.innerHTML = "Gender: ";
+genderLabel.setAttribute("class", "genderLabel");
+var spanElement1 = document.createElement("span");
+spanElement1.innerHTML = "Gender:";
+
+genderLabel.appendChild(spanElement1);
 
 var genderList = document.createElement("li");
+genderList.setAttribute("class", "genderList")
+
 var maleLabel = document.createElement("span");
 maleLabel.innerHTML = "Male: ";
 var radioBtn1 = document.createElement("input");
@@ -54,10 +82,16 @@ mainContainer.appendChild(genderUl);
 
 // Country Selection
 var countryUl = document.createElement("ul");
+countryUl.setAttribute("class", "countryUl")
 var countryLabel = document.createElement("li");
-countryLabel.innerHTML = "Country: ";
+countryLabel.setAttribute("class", "countryLabel");
+
+var spanElement = document.createElement("span");
+spanElement.innerHTML = "Country: ";
+countryLabel.appendChild(spanElement);
 
 var countryDropDownList = document.createElement("li");
+countryDropDownList.setAttribute("class", "countryDropDownList");
 
 var dropDown = document.createElement("Select");
 dropDown.setAttribute("class", "drowDwnDta");
@@ -82,9 +116,11 @@ mainContainer.appendChild(countryUl);
 // button
 
 var sbtBtnUl = document.createElement("ul");
+sbtBtnUl.setAttribute("class", "sbtBtnUl");
 var buttonList = document.createElement("li");
 
 var submitButton = document.createElement("button");
+submitButton.setAttribute("class", "submitButtonImp");
 submitButton.innerHTML = "Add Details";
 
 buttonList.appendChild(submitButton);
@@ -130,7 +166,7 @@ tableRow.appendChild(tableHeading6);
 var tableBody = document.createElement("tbody");
 tableBody.setAttribute("id", "tableBodyId");
 
-var scholarCounter = "0" + 1;
+var scholarCounter = 1;
 var rowsID;
 
 submitButton.addEventListener("click", () => {
@@ -155,11 +191,10 @@ submitButton.addEventListener("click", () => {
   tableData5.innerHTML = sAge;
   var tableData6 = document.createElement("td");
   var editButton = document.createElement("button");
+  editButton.setAttribute("class", "editButton")
   editButton.innerHTML = "Edit";
-  editButton.addEventListener("click", () => {
-
-  });
   var deleteButton = document.createElement("button");
+  deleteButton.setAttribute("class", "deleteButton");
   deleteButton.innerHTML = "Delete";
   deleteButton.addEventListener("click", () => {
     tableRowBody.remove(tableData6);
