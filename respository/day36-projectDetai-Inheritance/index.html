@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstrating the inheritance properties and behavior.</title>
+</head>
+<body>
+    
+    <script>
+        /* actually here we are working with inheritance */
+
+        // if we want to achieve the inheritance behavior then we will go with the proto keyword
+        var productOwnerInformation = {
+            owner : "Prasad sharma",
+            location : "NewDelhi",
+            company : "ABC manufacturing"
+        }
+
+        var product1 = {
+            name : "Laptop",
+            price : "$5000",
+            discount : 20,   
+        }
+
+        product1.__proto__ = productOwnerInformation
+
+        console.log(product1.name);
+        console.log(product1.price);
+        console.log(product1.discount);
+        console.log(product1.owner);
+
+        
+
+        // without using the proto keyword we can't achieve the inheritance
+        var product2 = {
+            name : "Gas Stove",
+            price : "$ 500",
+            discount : 10,
+        }
+
+        console.log(product2.name);
+        console.log(product2.price);
+        console.log(product2.discount);
+        console.log(product2.owner);
+    </script>
+</body>
+</html>
