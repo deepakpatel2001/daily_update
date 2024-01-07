@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstrating the Dynamic event handling</title>
+</head>
+<body>
+    <div>
+        <label for="userName">Enter Name: </label>
+        <input type="text" name="userName">
+    </div>
+
+    <div>
+        <label for="userPassword">Enter Password: </label>
+        <input type="text" name="userPassword">
+    </div>
+
+    <div>
+        <button class="btn btn_details">Add Details</button>
+    </div>
+
+    <script>
+
+        // dynamic event handling ka matlab seedha hai ki bhai aap kaise bina function pass kiye use kar sakte ho apne element ko 
+        var deepak = document.querySelector(".btn")
+        deepak.addEventListener("click",() => {
+            console.log("clicked");
+        })
+    </script>
+</body>
+</html>
