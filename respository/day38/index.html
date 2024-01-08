@@ -31,12 +31,9 @@
     </div>
 
     <script>
-        var bName = document.getElementById("boName").value;
-        var bPrice = document.getElementById("boPrice").value;
-        var bPublisher = document.getElementById("boPublisher").value;
-        var bAuthor = document.getElementById("boAuthor").value;
-        var bCategory = document.getElementById("boCategory").value;
         var bButton = document.getElementById("bobtBtn");
+
+        var array = []
 
         bButton.addEventListener("click", () => {
             class BooksInformation {
@@ -48,7 +45,7 @@
                     this.boCategory = object.bookCategory
                 }
                 getBookDiscount(){
-                    if(this.bookCategory == "comic"){
+                    if(this.boCategory == "comic"){
                         this.discount = "$20"
                     }else{
                         this.discount = "$30"
@@ -61,17 +58,22 @@
                     console.log("The book Publisher is : " + this.boPublisher);
                     console.log("The book Author is : " + this.boAuthor);
                     console.log("The book Cateogry is : " + this.boCategory);
+                    console.log("The book discount is : " + this.discount);
                 }
             }
 
-            var book1 = new BooksInformation({bookName : bName, bookPrice: bPrice, bookPublisher: bPublisher, bookCategory: bCategory, bookAuthor: bAuthor});
+            var bookObject = {}
+                bookObject.bookName = document.getElementById("boName").value,
+                bookObject.bookPrice = document.getElementById("boPrice").value,
+                bookObject.bookPublisher = document.getElementById("boPublisher").value, 
+                bookObject.bookCategory = document.getElementById("boCategory").value
+                bookObject.bookAuthor = document.getElementById("boAuthor").value
+
+            var book1 = new BooksInformation(bookObject);
             book1.diplayBookData()
 
-
-            var book2 = new BooksInformation({bookName : bName, bookPrice: bPrice, bookPublisher: bPublisher, bookCategory: bCategory, bookAuthor: bAuthor});
-            book2.diplayBookData();
-
-            // basically agar hum dekhe to bhai baar baar user ki taraf se data aayega to fir hum use dikhana padta hai ki kaise do baar ka data aa jaye
+            array.push(book1)
+            console.log(array);
         })
     </script>
 </body>
