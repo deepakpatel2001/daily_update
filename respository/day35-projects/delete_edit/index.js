@@ -15,6 +15,19 @@ nameParentList.setAttribute("class", "marginSpace");
 var nameInputList = document.createElement("input");
 nameInputList.setAttribute("id", "studentName");
 
+// Name validation
+nameInputList.addEventListener("keypress",  (event) => {
+  var validKeys = /^[a-zA-Z ]+$/;
+  var keyPressed = event.key;
+
+  if (validKeys.test(keyPressed)) {
+    return true;
+  } else {
+    event.preventDefault(); 
+    return false;
+  }
+});
+
 nameParentList.appendChild(nameInputList);
 nameLabel.appendChild(spanElement);
 
@@ -33,6 +46,20 @@ spanElement.innerHTML = "Age: ";
 
 var ageParentList = document.createElement("li");
 var ageInputList = document.createElement("input");
+
+// Age Validation
+ageInputList.addEventListener("keypress", (event) => {
+  var validKeys = /^[0-9]+$/;
+  var keyPressed = event.key;
+
+  if (validKeys.test(keyPressed)) {
+    return true;
+  } else {
+    event.preventDefault();
+    return false;
+  }
+});
+
 ageInputList.setAttribute("id", "sAge");
 ageInputList.setAttribute("placeholder", "29");
 
@@ -113,7 +140,7 @@ countryUl.appendChild(countryLabel);
 countryUl.appendChild(countryDropDownList);
 mainContainer.appendChild(countryUl);
 
-// button
+// Submit button
 
 var sbtBtnUl = document.createElement("ul");
 sbtBtnUl.setAttribute("class", "sbtBtnUl");
@@ -127,8 +154,7 @@ buttonList.appendChild(submitButton);
 sbtBtnUl.appendChild(buttonList);
 mainContainer.appendChild(sbtBtnUl);
 
-// Table information
-
+// Table Creation and information
 var mainTable = document.querySelector(".formTable");
 
 var creatingTable = document.createElement("table");
@@ -137,7 +163,6 @@ creatingTable.setAttribute("cellSpacing", "10");
 creatingTable.setAttribute("width", "100%");
 creatingTable.style.fontSize="22px"
 creatingTable.style.textAlign="center"
-
 
 var tableHeader = document.createElement("thead");
 
@@ -169,7 +194,10 @@ tableBody.setAttribute("id", "tableBodyId");
 var scholarCounter = 1;
 var rowsID;
 
+// all funcionality on clicking the submit button
+
 submitButton.addEventListener("click", () => {
+  document.getElementById("tableInformationHide").style.display = "block";
   var sName = document.getElementById("studentName").value.toUpperCase();
   var sAge = document.getElementById("sAge").value;
   var gender = document.querySelector("input[name=gender]:checked").value;
@@ -193,6 +221,7 @@ submitButton.addEventListener("click", () => {
   var editButton = document.createElement("button");
   editButton.setAttribute("class", "editButton")
   editButton.innerHTML = "Edit";
+
   var deleteButton = document.createElement("button");
   deleteButton.setAttribute("class", "deleteButton");
   deleteButton.innerHTML = "Delete";
@@ -212,6 +241,45 @@ submitButton.addEventListener("click", () => {
   tableRowBody.appendChild(tableData5);
   tableRowBody.appendChild(tableData6);
   tableBody.appendChild(tableRowBody);
+  
+  editButton.addEventListener("click", () => {
+    nameInputList.value = sName;
+    ageInputList.value = sAge
+    if(gender == "male"){
+      radioBtn1.checked = true;
+    }else{
+      radioBtn2.checked = true;
+    }
+    dropDown.value = sCountry;
+
+    var updateButton = document.createElement("input");
+    updateButton.type = "button";
+    updateButton.setAttribute("class", "submitButtonImp");
+    updateButton.value = "Update Details";
+
+    updateButton.addEventListener('click', ()=>{
+      sName = nameInputList.value;
+      sAge = ageInputList.value;
+      if (radioBtn1.checked) {
+        gender = "male";
+      } else {
+        gender = "female";
+      }
+      sCountry = dropDown.value;
+
+      tableData2.innerHTML = sName;
+      tableData3.innerHTML = gender;
+      tableData4.innerHTML = sCountry;
+      tableData5.innerHTML = sAge;
+
+      updateButton.style.display = "none";
+      submitButton.style.display = "block";
+    })   
+
+    buttonList.appendChild(updateButton);
+    submitButton.style.display = "none";
+  }); 
+
 });
 
 tableHeader.appendChild(tableRow);
