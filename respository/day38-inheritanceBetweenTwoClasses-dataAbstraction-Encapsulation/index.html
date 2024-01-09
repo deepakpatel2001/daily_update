@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete class</title>
+</head>
+<body>
+    <div>
+        <label for="boName">Name: </label>
+        <input type="text" name="boName" id="boName">
+    </div>
+    <div>
+        <label for="boPrice">Price: </label>
+        <input type="text" name="sPrice" id="boPrice">
+    </div>
+    <div>
+        <label for="boPublisher">Publisher: </label>
+        <input type="text" name="boPublisher" id="boPublisher">
+    </div>
+    <div>
+        <label for="boAuthor">Author: </label>
+        <input type="text" name="boPublisher" id="boAuthor">
+    </div>
+    <div>
+        <label for="boCategory">Category: </label>
+        <input type="text" name="boCategory" id="boCategory">
+    </div>
+    <div>
+        <input type="button" name="" id="bobtBtn" value="Submit">
+    </div>
+
+    <script>
+        var bButton = document.getElementById("bobtBtn");
+
+        var array = []
+
+        bButton.addEventListener("click", () => {
+            class BooksInformation {
+                constructor(object){
+                    this.boName = object.bookName;
+                    this.boPrice = object.bookPrice;
+                    this.boPublisher = object.bookPublisher;
+                    this.boAuthor = object.bookAuthor;
+                    this.boCategory = object.bookCategory
+                }
+                getBookDiscount(){
+                    if(this.boCategory == "comic"){
+                        this.discount = "$20"
+                    }else{
+                        this.discount = "$30"
+                    }
+                }
+                diplayBookData(){
+                    this.getBookDiscount()
+                    console.log("The book name is : " + this.boName);
+                    console.log("The book Price is : " + this.boPrice);
+                    console.log("The book Publisher is : " + this.boPublisher);
+                    console.log("The book Author is : " + this.boAuthor);
+                    console.log("The book Cateogry is : " + this.boCategory);
+                    console.log("The book discount is : " + this.discount);
+                }
+            }
+
+            var bookObject = {}
+                bookObject.bookName = document.getElementById("boName").value,
+                bookObject.bookPrice = document.getElementById("boPrice").value,
+                bookObject.bookPublisher = document.getElementById("boPublisher").value, 
+                bookObject.bookCategory = document.getElementById("boCategory").value
+                bookObject.bookAuthor = document.getElementById("boAuthor").value
+
+            var book1 = new BooksInformation(bookObject);
+            book1.diplayBookData()
+
+            array.push(book1)
+            console.log(array);
+        })
+    </script>
+</body>
+</html>
