@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tambola Game Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="inputDataDiv">
-        <label for="inputData">Enter Your Desire number between 1 to 100</label>
+        <label for="inputData" id="labelData">Enter Your Desire number between 1 to Anything, but if you want to win fast then keep some limit.</label>
         <input type="text" name="inputData" id="inputId">
-        <input type="button" id="inputSubmitBtn" value="submit data">
+        <input type="button" id="inputSubmitBtn" value="Submit data">
     </div>
 
-    <div class="parentDiv">
+    <div class="parentDiv" id="parentDiv">
         <div class="leftDiv" id="leftDiv"></div>
         <div class="rightDiv">
             <div class="childDiv">
@@ -22,14 +24,17 @@
                     </div>
                 </div>
                 <div class="buttonDiv">
-                    <input type="button" name="" id="" id="randomButton" value="show" class="randomButton">
-                </div>                
+                    <input type="button" name="randomVal" id="randomButton" value="show" class="randomButton">
+                </div>
             </div>
+        </div>
+
+        <div id="winShow">
+            Hey Bro You won the match.. HURRAH...🪄
         </div>
     </div>
 
-    
-
     <script src="index.js"></script>
 </body>
+
 </html>
