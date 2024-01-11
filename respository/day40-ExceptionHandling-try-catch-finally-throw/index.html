@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task asigning tool</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="badaSaDiv">
+        <div class="title">Task Assigning tool</div>
+        <div class="container">
+
+            <input type="text" name="nameData" class="inputField" id="inputFieldValue">
+
+            <input type="button" value="Save Data" class="saveData inputField btn" id="saveInputData" onclick=empSaveData()>
+
+            <input type="button" value="create task" class="taskContainer inputField btn" onclick="taskButton()">
+
+            <input type="button" name="showData" id="Show_Data" value="Show Data" class="inputField btn" onclick="showData()">
+        </div>
+    </div>
+
+    <div class="taskTaker taskConsumer">
+    </div>
+
+    <div class="thnxMsg taskList" id="greeting">
+        Thank you for creating the task, Have a good Day.
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
