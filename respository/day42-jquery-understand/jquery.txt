@@ -1,0 +1,16 @@
+bhai jquery ka use sirf dom manipulation ka scene hai jaise hame
+
+var highlightItem = () =>{
+    var existingClass = document.querySelector("#block").getAttribute("class");
+
+    existingClass = existingClass + " highlight"
+
+    document.querySelector("#block").setAttribute("class", existingClass)
+}
+
+var highlightItem = () = {
+    $("#block").addClass("highlight")
+}
+
+we have to visit the jquery official website and then copy the url from the urlPoint
+because the code of jquery is written in the closure's form that's why we have to use the dollar sign ($) and itself jQuery, so we have to use the $ || jQuery ka use karke hum jquery ke code ka use karte hai

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery example</title>
+</head>
+<body>
+    <div class="container" id="block">
+        Hello everyone, very good morning.
+    </div>
+    <input type="button" value="highlight" onclick="highlightItem()">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        // using the javascript
+        // var highlightItem = () =>{
+        //     var existingClass = document.querySelector("#block").getAttribute('class')
+        //     existingClass = existingClass + " highlight";
+        //     document.querySelector("#block").setAttribute('class', existingClass);
+        // }
+
+        var highlightItem = () => {
+            $("#block").addClass("highlight")
+        }
+    </script>
+</body>
+</html>
