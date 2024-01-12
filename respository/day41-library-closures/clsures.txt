@@ -1,0 +1,11 @@
+hello sabse pehele to ye samajhate hai ki closures ki jarurat kyu padhi?
+
+because closures are the security provider for the data which is put under in it. Basically ye isliye use hota hai ki suppose hamare paas ek variable hai khudka or fir hum use kar rahe hai ek library or wo library coincidently use kar rahi hai same variable ka to fir conflict ho sakta hai data ka to isko resolve karne ke liye hum closure ka use karte hai.
+
+Syntax :- 
+
+()()
+
+first curly bracket contains the whole code which is written inside the library and second parentheses ka matlab hai ki hum us function ko call kar rahe hai, basically ye ek function hi hota hia par different type ka jaha hume jarurat nahi hai us function ko call karne ki it gets executed automatically by default.
+
+dekho closures ko samajhne se pehle hame lexical scoping ka matlab pata hona chahiye.
