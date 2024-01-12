@@ -9,3 +9,11 @@ Syntax :-
 first curly bracket contains the whole code which is written inside the library and second parentheses ka matlab hai ki hum us function ko call kar rahe hai, basically ye ek function hi hota hia par different type ka jaha hume jarurat nahi hai us function ko call karne ki it gets executed automatically by default.
 
 dekho closures ko samajhne se pehle hame lexical scoping ka matlab pata hona chahiye.
+
+how to access the data from the closures:-
+
+first declare the variable 
+then second time return an object
+use the return value as myData.maxLength
+
+like follow these three steps to use the clsoures value.
