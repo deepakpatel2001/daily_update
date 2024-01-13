@@ -1,0 +1,5 @@
+bhai seedha sa baat hai par bhai ki jquery kam code likhne me yakeen karta hai ab uske pehle waale ya ooper waale code ko check karo to tumhe pata chal jaayega, ki kitna aasan hai jquery ko use karna hai,
+
+fir humne code likhe jquery ke saadharn sa baaki ke method aasan hai isliye unhe aage padhegne, 
+
+ajax ko samjha, client side hota hai, server side hota hia, database side kya hota hia, and all
