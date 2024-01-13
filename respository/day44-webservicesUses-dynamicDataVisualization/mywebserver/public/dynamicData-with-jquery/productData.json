@@ -1,0 +1,25 @@
+{
+  "productInfo":  [
+    {
+      "productName": "hp",
+      "productActualPrice": 1000,
+      "discountPercentage": 70,
+      "productManufacturer": "Sony",
+      "productImgUrl": "https://m.media-amazon.com/images/I/81lK9ePIMtL._SX522_.jpg"
+    },
+    {
+      "productName": "Watch",
+      "productActualPrice": 300,
+      "discountPercentage": 18,
+      "productManufacturer": "Quartz",
+      "productImgUrl": "https://m.media-amazon.com/images/I/41H+iVRHKCL._SY300_SX300_.jpg"
+    },
+    {
+      "productName": "Mobile",
+      "productActualPrice": 12000,
+      "discountPercentage": 12,
+      "productManufacturer": "Nokia",
+      "productImgUrl": "https://m.media-amazon.com/images/I/61FX8qveBNL._SY741_.jpg"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+now first of all you have to create a server related to the website because if you want to create a connection between the server and the client side then you have to have a server so that there will no problem regarding the CORS issue, cors will be discuss next time, till then use this to no view for this error.
+
+HOW TO CREATE A SERVER :- total 6 line of code
+
+yarn add express -g
+yarn add -g express-generator
+yarn express mywebserver (Create your server accordign to your choice name).
+cd mywebserver
+yarn install
+yarn start
+
+now use the jquery's ajax method to call the web services and all, 
