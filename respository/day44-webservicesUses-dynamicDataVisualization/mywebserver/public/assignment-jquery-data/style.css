@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parentContainer{
+    width: 80%;
+    margin: 30px auto;
+}
+
+.userInformationTitle{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+
+.ulTagData{
+    margin: 10px 20px;
+    list-style-type: none;
+    float: left;
+    border: 2px solid;
+}
+
+.list{
+    border: 2px solid;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: cursive;
+    margin: 10px;
+    padding: 7px;
+}
+.imageDetails{
+    margin: 10px 0;
+    width: 200px;
+    height: 200px;
+    display: block;
+}

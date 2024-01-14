@@ -1,0 +1,36 @@
+{
+    "empInfo" : [
+      {
+        "name": "Ram",
+        "img" : "https://blog.hubspot.com/hs-fs/hubfs/employee-retention-rate.jpg?width=595&height=400&name=employee-retention-rate.jpg",
+        "age": 29,
+        "gender": "Male",
+        "contact" : 9563287142,
+        "basicSallery": 40000
+      },
+      {
+        "name": "Krishna",
+        "img": "https://uschamber-co.imgix.net/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fco-assets%2Fassets%2Fimages%2FLegal-Requirements-Hiring-Employees.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.4754&fp-y=0.3321&h=415&q=88&w=622&s=de4e8920342f8a282aadb2e0aef49ef6",
+        "age": 22,
+        "gender": "Male",
+        "contact": 9563287143,
+        "basicSallery": 15000
+      },
+      {
+        "name": "Sudama",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6nLZ1Pcy3kMBxk9T6_cTmbxnSHS0pTH7MHK-oRXCeMKGHAJ-kSmoe-1pZLgxryJEwWCw&usqp=CAU",
+        "age": 26,
+        "gender": "Male",
+        "contact": 9563287144,
+        "basicSallery": 9000
+      },
+      {
+        "name": "Suhani",
+        "img" : "https://img.freepik.com/free-photo/confident-cheerful-young-businesswoman_1262-20881.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1705104000&semt=sph",
+        "age": 21,
+        "gender": "Female",
+        "contact": 9563287145,
+        "basicSallery": 40000
+      }
+    ]
+}
