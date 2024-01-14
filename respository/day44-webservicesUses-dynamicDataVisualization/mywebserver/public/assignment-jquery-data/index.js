@@ -1,12 +1,13 @@
 var mainInputData = [];
 
 $.ajax({
-  url: "http://localhost:8082/assignment-jquery-data/information.json",
+  url: "http://localhost:8082/emp", // this is the routing of the webserives 
   dataType: "JSON",
   method: "GET",
   data: {},
   success: (response) => {
     mainInputData = response.empInfo;
+    console.log(response);
     for (var i = 0; i < mainInputData.length; i++) {
       superContentData(mainInputData[i]);
     }
