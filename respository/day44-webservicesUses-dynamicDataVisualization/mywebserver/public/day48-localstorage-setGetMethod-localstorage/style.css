@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.input{
+    font-size: 22px;
+    font-family: cursive;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+#mainData{
+    display: none;
+    border: 2px solid;
+    background-color: aqua;
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    width: 500px;
+    margin: 30px auto;
+}
