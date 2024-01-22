@@ -35,4 +35,3 @@ document.getElementById("themeData").addEventListener("click", () => {
   theme = document.getElementById("themeData").value;
   setTheme(theme)
 });
-
