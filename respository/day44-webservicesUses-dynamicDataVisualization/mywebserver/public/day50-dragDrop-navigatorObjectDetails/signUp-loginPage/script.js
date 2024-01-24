@@ -1,21 +1,64 @@
-var formData = document.querySelector('#sveDta');
+var formData = document.querySelector("#sveDta");
 formData.addEventListener("click", (event) => {
-    event.preventDefault()
-    nameData()
-    ageData()
-    genderData()
-    dobData()
-    passwordData()
-    confirmPasswordData()
-})
+  event.preventDefault();
+  nameData();
+  ageData();
+  genderData();
+  dobData();
+  passwordData();
+  confirmPasswordData();
+});
 
-var uName
-var nameData = () => {
-    uName = document.querySelector("#uName").value
-    localStorage.setItem("uName", uName)
+if(localStorage.getItem("uName") != null){
+    document.querySelector("#uName").value = localStorage.getItem("uName");
 }
 
+if (localStorage.getItem("uAge") != null) {
+  document.querySelector("#uAge").value = localStorage.getItem("uAge");
+}
+
+if (localStorage.getItem("birthday") != null) {
+  document.querySelector("#calender").value = localStorage.getItem("birthday");
+}
+
+// if (localStorage.getItem("uGender") != null) {
+//   document.querySelector("#uGender").value = localStorage.getItem("uGender");
+// }
+
+if (localStorage.getItem("pswds") != null) {
+  document.querySelector("#pswd").value = localStorage.getItem("pswds");
+  console.log("Hello");
+}
+
+if (localStorage.getItem("cnfmPswd") != null) {
+  document.querySelector("#cnfmPswd").value = localStorage.getItem("cnfmPswd");
+}
+
+var uName;
+checkingString = (event) => {
+  var regex = /^[A-Za-z ]/;
+  uName = event.key;
+  if (regex.test(uName)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+var nameData = () => {
+  uName = document.querySelector("#uName").value;
+  localStorage.setItem("uName", uName);
+};
+
 var uAge;
+checkingAge = (event) => {
+  var regex = /^[0-9]/;
+  uName = event.key;
+  if (regex.test(uName)) {
+    return true;
+  } else {
+    return false;
+  }
+};
 var ageData = () => {
   uAge = document.querySelector("#uAge").value;
   localStorage.setItem("uAge", uAge);
@@ -35,21 +78,30 @@ var dobData = () => {
 
 var pswd;
 var passwordData = () => {
-    pswd = document.querySelector("#pswd").value;
-    localStorage.setItem("pswds", pswd);
-}
+  pswd = document.querySelector("#pswd").value;
+  localStorage.setItem("pswds", pswd);
+};
+
+var result;
+checkingPassword = () => {
+  result = document.querySelector("#cnfmPswd").value;
+  console.log(result);
+  if (result !== document.querySelector("#pswd").value) {
+    document.querySelector(".misMatched").style.display = "block";
+  }else{
+    document.querySelector(".misMatched").style.display = "none";
+  }
+};
 
 var confirmPassword;
 var confirmPasswordData = () => {
-    confirmPassword = document.querySelector("#cnfmPswd").value;
-    if(confirmPassword === pswd){
-        localStorage.setItem("cnfmPswd", confirmPassword);
-    }
-}
+  confirmPassword = document.querySelector("#cnfmPswd").value;
+  localStorage.setItem("cnfmPswd", confirmPassword);
+};
 
 var mainController = document.querySelector("#fgtPswd");
 mainController.addEventListener("click", (event) => {
-    event.preventDefault()
+  event.preventDefault();
   uName = localStorage.getItem("uName");
   uAge = localStorage.getItem("uAge");
   uGender = localStorage.getItem("uGender");
@@ -59,6 +111,7 @@ mainController.addEventListener("click", (event) => {
 
   document.querySelector("#uName").value = uName;
   document.querySelector("#uAge").value = uAge;
+
   var radioButtons = document.querySelectorAll('input[name="gender"]');
   radioButtons.forEach((radio) => {
     if (radio.value === uGender) {

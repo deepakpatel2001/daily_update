@@ -10,12 +10,12 @@
     <form action="#" class="formData">
         <div class="Name">
             <label for="Name">Name: </label>
-            <input type="text" name="Name" id="uName">
+            <input type="text" name="Name" id="uName" onkeypress="return checkingString(event)">
         </div>
 
         <div class="age">
             <label for="age">Age: </label>
-            <input type="text" name="age" id="uAge">
+            <input type="text" name="age" id="uAge" onkeypress="return checkingAge(event)">
         </div>
 
         <div class="gender">
@@ -28,7 +28,7 @@
 
         <div class="dateBirth">
             <label for="DOB">DOB: </label>
-            <input type="date" name="DOB" id="calender">
+            <input type="date" name="DOB" id="calender" required>
         </div>
         
         <div class="passw">
@@ -38,7 +38,8 @@
         
         <div class="fgtPass">
             <label for="fgtPwd">Confirm Password: </label>
-            <input type="password" name="fgtPwd" id="cnfmPswd">
+            <input type="password" name="fgtPwd" id="cnfmPswd" onfocusout="checkingPassword()">
+            <p class="misMatched">Password Not Matched.</p>
         </div>
         
         <input type="button" value="Save Data" id="sveDta">
