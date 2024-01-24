@@ -21,10 +21,6 @@ if (localStorage.getItem("birthday") != null) {
   document.querySelector("#calender").value = localStorage.getItem("birthday");
 }
 
-// if (localStorage.getItem("uGender") != null) {
-//   document.querySelector("#uGender").value = localStorage.getItem("uGender");
-// }
-
 if (localStorage.getItem("pswds") != null) {
   document.querySelector("#pswd").value = localStorage.getItem("pswds");
   console.log("Hello");

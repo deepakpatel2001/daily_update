@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with Localstorage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="#" class="formData">
+        <div class="userNme">
+            <label for="uName">UserName: </label>
+            <input type="text" placeholder="John Doe" name="uName" id="nameField" onkeypress="return stringCheck(event)">
+        </div>
+        <div class="userPass">
+            <label for="uPass">Password: </label>
+            <input type="password" name="uPass" id="passField" >
+        </div>
+        <div class="userCnfmPass">
+            <label for="cPass">Confirm Password: </label>
+            <input type="password" name="cPass" id="cPassField">
+            <p class="error">password not matched</p>
+        </div>
+        <div class="buttonGrp">
+            <input type="button" value="Save Data" id="saveBtn">
+        </div>
+        <div class="valueData">
+            <a href="#" id="fgtPswd" onkeypress="">forget password?</a>
+        </div>        
+
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
