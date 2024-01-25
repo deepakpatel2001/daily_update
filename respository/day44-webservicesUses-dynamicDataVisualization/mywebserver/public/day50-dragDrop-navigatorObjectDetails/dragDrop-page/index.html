@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and drop category wise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="upperDiv">
+        <div class="menDiv" ondrop="menDraggable(event)" ondragover="menDragEnded(event)">
+            <p class="center">Men's Wear</p>
+        </div>
+        <div class="womenDiv" ondrop="womenDraggable(event)" ondragover="womenDragEnded(event)">
+            <p class="center">Women's Wear</p>
+        </div>
+        <div class="kidsDiv" ondrop="kidsDraggable(event)" ondragover="kidsDragEnded(event)">
+            <p class="center">Kid's Wear</p>
+        </div>
+    </div>
+
+    <div class="lowerDiv">
+        <p class="center">All Data</p>
+        <img src="./images/kid1.webp" draggable="true" ondragstart="kidStart(event)" id="kidImg1">
+        <img src="./images/men2.jpg" draggable="true" ondragstart="menStart(event)" id="menImg2">
+        <img src="./images/women3.webp" draggable="true" ondragstart="womenStart(event)" id="womenImg3">
+        <img src="./images/kid3.webp" draggable="true" ondragstart="kidStart(event)" id="kidImg3">
+        <img src="./images/kid2.webp" draggable="true" ondragstart="kidStart(event)" id="kidImg2">
+        <img src="./images/men3.jpg" draggable="true" ondragstart="menStart(event)" id="menImg3">
+        <img src="./images/women1.webp" draggable="true" ondragstart="womenStart(event)" id="womenImg1">
+        <img src="./images/men1.jpg" draggable="true" ondragstart="menStart(event)" id="menImg1">
+        <img src="./images/kid4.webp" draggable="true" ondragstart="kidStart(event)" id="kidImg4">
+        <img src="./images/men4.webp" draggable="true" ondragstart="menStart(event)" id="menImg4">
+        <img src="./images/women2.webp" draggable="true" ondragstart="womenStart(event)" id="womenImg2">
+        <img src="./images/women4.webp" draggable="true" ondragstart="womenStart(event)" id="womenImg4">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

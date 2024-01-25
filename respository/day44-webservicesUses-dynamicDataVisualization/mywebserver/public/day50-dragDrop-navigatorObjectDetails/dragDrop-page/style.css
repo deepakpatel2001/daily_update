@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: cursive;
+    background: url('https://cdn.pixabay.com/photo/2014/08/01/00/08/pier-407252_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.upperDiv{
+    width: 90%;
+    margin: 20px auto;
+    border: 2px solid white;
+    position: relative;
+}
+
+.lowerDiv{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.menDiv, .womenDiv, .kidsDiv{
+    border: 2px solid;
+    height: 450px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.50);
+    padding: 10px;
+}
+
+.womenDiv{
+    position: absolute;
+    left: 460px;
+    top: 0px;
+}
+
+.kidsDiv{
+    position: absolute;
+    left: 920px;
+    top: 0px;
+}
+
+.center{
+    text-align: center;
+    font-size: 25px;
+    background-color: aqua;
+}
+
+.lowerDiv{
+    border: 2px dotted;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
