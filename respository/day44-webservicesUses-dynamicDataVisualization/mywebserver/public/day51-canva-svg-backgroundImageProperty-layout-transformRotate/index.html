@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canva and Svg Tag</title>
+    <style>
+        .canvaContainer{
+            height: 500px;
+            width: 500px;
+            margin: 20px auto;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <p>Me canvas hu</p>
+    <canvas class="canvaContainer">
+        
+    </canvas>
+    <b>Dekho baat esi hai ki canvas ko use karne ke liye aap pehle ek canvas tag banalo, then fir us canvas ke liye javascript ka use karke ek context ready karo getContext(2d) method ki madad se, then us variable ka access karke predefined methods ka use karo jaise ki moveTo and lineTo isse ek line ban jaati hai isme hum cordinate paas karte hai as parameter, next arc method ka use hum circle banane me karte hai 5 parameter bhejkar 4 cordinate hote hai ek radius hota hai, next fillRect method ka use karke hum rectangle bana lete hai, ese hi kayi saare methods hai.</b>
+    <script>
+        var ctx = document.querySelector('.canvaContainer').getContext('2d')
+        ctx.moveTo(0, 0)
+        ctx.lineTo(10, 17)
+        ctx.arc(20, 50, 8, 0, 2 * Math.PI) // first four cordinate and last is radius
+        
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(50, 60, 150, 100);
+
+        ctx.font = "22px Cursive";
+        ctx.fillStyle = "green";
+        ctx.fillText("Hello Deepak kaise ho!", 10, 30)
+
+        ctx.font = "11px Verdana";
+        ctx.fillStyle = "pink";
+        ctx.fillText("Me accha hu tum sunao!", 22, 42)
+        ctx.stroke()
+
+        ctx.font = "25px Cursive";
+        ctx.fillStyle = "green";
+        ctx.strokeText("Hi bros", 70, 80)
+    </script>
+</body>
+</html>
