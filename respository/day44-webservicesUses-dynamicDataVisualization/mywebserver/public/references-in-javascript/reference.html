@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference variable</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+
+    <script>
+        // primitive variable reference
+        var a = 7;
+        var b = a
+        b = 9
+        console.log(b);
+
+        var obj = {
+            mohan : "Hello",
+            deep : 9
+        }
+
+        // object variable reference actually hota esa hai ki isme jo hai wo address reference ka kehl ho jata hai jaise ki jo obj2 hai wo obj ko le raha hai address and next jo address tha usme change karne par real waale me bhi changes aa jaate hai values me
+
+        var obj2 = obj
+        console.log(obj2);
+        obj2.mohan = "Krishna"
+        console.log(obj2);
+        console.log(obj);
+
+        // function reference 
+        var result = {
+            pass : true,
+            fail : "yes"
+        }
+        console.log(result.pass);
+
+        function deepak(result){
+            result.pass = false;
+            result.fail = "No"
+        }
+        deepak(result)
+        console.log(result.pass);
+
+        // array ka bhi same hai
+
+        var arr = [30, 50, 70]
+
+        function arraReference(arr){
+            arr[0] = 9;
+        }
+        arraReference(arr)
+
+        console.log(arr);
+    </script>
+</body>
+</html>
