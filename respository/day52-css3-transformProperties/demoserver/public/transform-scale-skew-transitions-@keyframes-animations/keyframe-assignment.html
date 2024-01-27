@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parentContainer {
+            width: 80%;
+            height: 80vh;
+            margin: 20px auto;
+            border: 2px solid;
+            background-color: pink;
+            position: relative;
+        }
+
+        .childContainer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid;
+            margin: 10px;
+            border-radius: 50%;
+            animation: containerMover 15s linear infinite;
+            background-image: url('https://m.media-amazon.com/images/M/MV5BMjMyMTQzMjk1MV5BMl5BanBnXkFtZTgwMDg5MTMzOTE@._V1_UX140_CR0,0,140,209_AL_.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @keyframes containerMover {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            10%{
+                transform: translate(330px, 0);
+                background-image: url('https://m.media-amazon.com/images/M/MV5BNTk1OTUxMzIzMV5BMl5BanBnXkFtZTcwMzMxMjI0Nw@@._V1_UY209_CR6,0,140,209_AL_.jpg');
+            }
+
+            20%{
+                transform: translate(660px, 0);
+                background-image: url('https://m.media-amazon.com/images/M/MV5BZGRlY2UwZTQtMzRhMi00M2NmLThkODMtYTQ5NDI3YmMyMWUwXkEyXkFqcGdeQXVyMTU2NTc1MTY@._V1_UY209_CR3,0,140,209_AL_.jpg');
+            }
+
+            30%{
+                transform: translate(990px, 0);
+                background-image: url('https://m.media-amazon.com/images/M/MV5BMjUyMWE5MjUtMDlkMC00ODc0LThkOTgtNjZhNDgyMTU5ZDhlXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_UX140_CR0,0,140,209_AL_.jpg');
+            }
+
+            40%{
+                transform: translate(990px, 175px);
+                background-image: url('https://m.media-amazon.com/images/M/MV5BYWRlMTk2NWYtYjhjNy00NmRjLTg4NWMtMmM2YjJlN2YwNWE4XkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_UY209_CR8,0,140,209_AL_.jpg');
+            }
+
+            50%{
+                transform: translate(990px, 350px);
+                background-image: url('https://m.media-amazon.com/images/M/MV5BYWRlMTk2NWYtYjhjNy00NmRjLTg4NWMtMmM2YjJlN2YwNWE4XkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_UY209_CR8,0,140,209_AL_.jpg');
+            }
+            60%{
+                transform: translate(660px, 350px);
+                background-image: url('https://m.media-amazon.com/images/M/MV5BOGQ4MTc3MWYtNmUxNi00Nzk3LWFjMDItM2Y1NmVmMDEyNWIxXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_UY209_CR3,0,140,209_AL_.jpg');
+            }
+            70%{
+                transform: translate(330px, 350px);
+                background-image: url('https://m.media-amazon.com/images/M/MV5BMTk0ODU5NjAzMl5BMl5BanBnXkFtZTcwNDYyOTM5NA@@._V1_UY209_CR87,0,140,209_AL_.jpg');
+            }
+            80%{
+                transform: translate(0, 350px);
+                background-image: url(./IMG20240124140012.jpg);
+            }
+            90%{
+                transform: translate(0, 175px);
+                background-image: url('https://m.media-amazon.com/images/M/MV5BMzg0NTM0MjYxN15BMl5BanBnXkFtZTcwMzY1NTAzMQ@@._V1_UY209_CR68,0,140,209_AL_.jpg');
+            }
+            100%{
+                transform: translate(660px, 175px);
+                background-image: url('https://m.media-amazon.com/images/M/MV5BNDg3NDgxNzY4NF5BMl5BanBnXkFtZTcwODMxODQzMg@@._V1_UY209_CR8,0,140,209_AL_.jpg');
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parentContainer">
+        <div class="childContainer"></div>
+    </div>
+</body>
+
+</html>
