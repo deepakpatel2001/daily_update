@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.container{
+    width: 250px;
+    border: 2px solid;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    background-color: hotpink;
+    border-radius: 20px;
+}
