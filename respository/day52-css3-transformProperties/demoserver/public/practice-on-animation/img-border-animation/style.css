@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+.border{
+    margin: 30px auto;
+    height: 300px;
+    width: 300px;
+    mix-blend-mode: multiply;
+    border-top: 7px solid rgb(134, 75, 68);
+    border-radius: 50%;
+    overflow: hidden;
+    animation: rotator 1s linear infinite;
+}
+
+
+
+img{
+    width: 100%;
+    height: 100%;
+    margin: 2px;
+}
+
+.btn{
+    padding: 3px 6px;
+    font-size: 22px;
+    margin-left: 30px;
+    border: 2px solid;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: salmon;
+    top: 0;
+    left: -98px;
+    transition: 0.7s ease;
+    z-index: -1;
+}
+
+.btn:hover::before{
+    left: 0px;
+}
