@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radial gradients example</title>
+    <style>
+        .container {
+            height: 300px;
+            width: 900px;
+            background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+            border: 2px solid;
+            margin: 10px auto;
+        }
+
+        .container1 {
+            height: 300px;
+            width: 900px;
+            background-image: radial-gradient(circle, red 5%, blue 15%, pink 60%);
+            border: 2px solid;
+            margin: 10px auto;
+        }
+
+        .list {
+            list-style: none;
+        }
+
+        .container2 {
+            height: 120px;
+            width: 900px;
+            background-image: repeating-radial-gradient(circle, red, yellow 10%, green 15%);
+            border: 2px solid;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        default ellipse
+    </div>
+
+    <div class="container1">
+        different different shapes.
+        <ul class="list">
+            <li>ellipse</li>
+            <li>circle</li>
+        </ul>
+    </div>
+
+    <div class="container2">
+        repeating type
+    </div>
+
+    <script>
+
+        // closures example // cl
+        function outerFunction(outerVariable) {
+            return function innerFunction(innerVariable) {
+                return (outerVariable + innerVariable);
+            };
+        }
+
+        const closureExample = outerFunction(10);
+        console.log(closureExample(5));
+    </script>
+</body>
+
+</html>

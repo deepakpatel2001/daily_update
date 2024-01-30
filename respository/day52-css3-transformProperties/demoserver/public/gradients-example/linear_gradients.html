@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linear Gradients</title>
+    <style>
+        .container1{
+            height: 300px;
+            width: 300px;
+            background-image: linear-gradient(rgb(22, 21, 21), green);
+            border: 2px solid black;
+            margin: 10px;
+        }
+        .container2{
+            height: 300px;
+            width: 300px;
+            background-image: linear-gradient(to right, yellow, pink);
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        .container3{
+            height: 300px;
+            width: 300px;
+            background-image: linear-gradient(to left, salmon, green);
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        .container4{
+            height: 300px;
+            width: 300px;
+            background-image: linear-gradient(to bottom, blue, pink, green, purple, salmon, rgb(0, 81, 128));
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        .byAngle{
+            height: 300px;
+            width: 300px;
+            background-image: linear-gradient(135deg, salmon, green);
+            border: 2px solid greenyellow;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        Top to bottom
+    </div>
+
+    <div class="container2">
+        left to right
+    </div>
+
+    <div class="container3">
+        right to left
+    </div>
+
+    <div class="container4">
+        bottom to top
+    </div>
+
+    <div class="byAngle">
+        hello angle ji
+    </div>
+</body>
+</html>
