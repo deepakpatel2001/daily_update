@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.parentContainer{
+    display: flex;
+    width : 80rem;
+    height : 50rem;
+    border: 2px solid;
+    justify-content: center;  /* this indicates the horizontal means element will be center to the x-axis*/
+    /*justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    justify-content: flex-end;
+    justify-content: flex-start; */
+    align-items: center;  /* this indicates the vertical means element will be center to the y-axis*/
+    /*
+    align-items: stretch; // default value of align items
+    align-items: flex-start;
+    align-items: flex-end;
+    */
+}
+
+.childPara{
+    font-size: 2rem;
+    /* flex-shrink: 0; this property is use when the element has no width and heihgt so when they started coerciv by the another element who have the fixed height, so by using this we can prevent our element from coercivness*/ 
+}
+
+.spanELement{
+    font-size: 2rem;
+    width : 400px;
+    height : 400px;
+    margin: 0 1rem;
+}
+
+.innerDiv{
+    font-size: 2rem;
+    /* flex-shrink: 0; this doesn't work with the justfiy content and align items because these both works on the free space and this is not having the free space. */
+}
