@@ -21,11 +21,10 @@ html {
   gap: 2rem;
   margin-inline: 3.2rem;
   margin-top: 2rem;
-  border: 2px solid;
 }
 
 .block {
-  width: 30rem;
+  width: 100%;
   height: 20rem;
   display: flex;
   justify-content: center;
