@@ -16,3 +16,23 @@ let capitalizeArr = fruits.map((fruit) => {
     return fruit.charAt(0).toUpperCase() + fruit.slice(1)
 })
 console.log(capitalizeArr);
+
+// custom mapMethod 
+
+let randomData = [3, 11, 34, 12, 32, 10, 9];
+
+function randomCallback(x) {
+  return x ** 3;
+}
+
+function customFilter(arr, cb) {
+  let newArray = [];
+
+  for (let index = 0; index < arr.length; index++) {
+    newArray.push(cb(arr[index]))
+  }
+
+  return newArray;
+}
+
+console.log(customFilter(randomData, randomCallback));

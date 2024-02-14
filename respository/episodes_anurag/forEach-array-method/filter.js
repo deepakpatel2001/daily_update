@@ -43,3 +43,27 @@ const res = students
   });
 
 console.log(res);
+
+
+// custom filter method wihout using the prototype
+
+let randomData = [23, 11, 34,12, 32, 10, 9]
+
+function randomCallback(x){
+    return x > 18;
+}
+
+function customFilter(arr, cb){
+    let newArray = [];
+
+    for (let index = 0; index < arr.length; index++) {
+        const res = cb(arr[index])
+        if(res){
+            newArray.push(arr[index])
+        }
+    }
+
+    return newArray;
+}
+
+console.log(customFilter(randomData, randomCallback));
