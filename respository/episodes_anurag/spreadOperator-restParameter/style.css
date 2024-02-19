@@ -1,0 +1,21 @@
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.cardAdder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    height: 150px;
+    width: 150px;
+    border: 2px solid;
+    background-color: rgb(161, 26, 24);
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
