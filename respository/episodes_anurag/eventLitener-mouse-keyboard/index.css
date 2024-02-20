@@ -1,0 +1,31 @@
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    height: 150px;
+    width: 150px;
+    border: 2px solid;
+    background-color: rgb(161, 26, 24);
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.cardAdder {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: 700;
+    background-color: cyan;
+}
