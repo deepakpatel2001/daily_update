@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog API</title>
+    <style>
+        img{
+            border-radius: 5px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to Dog App</h2>
+    <p><button>Change Image</button></p>
+    <img src="" width="500" height="500">
+
+    <script>
+        const image = document.querySelector('img')
+        const btn = document.querySelector('button')
+
+        btn.addEventListener('click', () => {
+            fetch('https://dog.ceo/api/breeds/image/random')
+                .then(response => response.json())
+                .then(json => {
+                    image.src = json.message
+                })
+        })
+    </script>
+</body>
+</html>
