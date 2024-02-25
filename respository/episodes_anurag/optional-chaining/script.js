@@ -20,4 +20,5 @@ const myArr = [
 ];
 
 console.log(myArr[3]?.krishna?.love?.sunidhi)
+console.log(myArr[2]?.name)
 console.log("You are right");
