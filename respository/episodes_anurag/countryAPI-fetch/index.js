@@ -2,11 +2,17 @@ let cardContainer = document.querySelector('.cardContiner');
 let input = document.querySelector('input');
 let selectCountry = document.querySelector('.selectCountry');
 let darkMode = document.querySelector('.dark-mode');
-let bodyData = document.querySelector('body')
+let bodyData = document.querySelector('body');
+let themeName = document.querySelector('.themeNameChanger');
 
 darkMode.addEventListener('click', () => {
     bodyData.classList.toggle('bodyData');
-})
+    if (themeName.innerHTML === 'Dark Mode') {
+        themeName.innerHTML = 'Light Mode';
+    } else {
+        themeName.innerHTML = 'Dark Mode';
+    }
+});
 
 async function apiCalling() {
     const mainUrl = 'https://restcountries.com/v3.1/independent?status=true';
@@ -38,7 +44,9 @@ async function apiCalling() {
             })
             .then((searchData) => {
                 const searchCountryData = searchData.filter((searchCountry) => {
-                    return searchCountry.name.common.toLowerCase().includes(e.target.value.toLowerCase());
+                    return searchCountry.name.common
+                        .toLowerCase()
+                        .includes(e.target.value.toLowerCase());
                 });
                 console.log(searchCountryData);
                 cardContainer.innerHTML = '';

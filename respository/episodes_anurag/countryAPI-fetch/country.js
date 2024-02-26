@@ -12,6 +12,18 @@ const tld = document.querySelector('.tld');
 const currencies = document.querySelector('.currencies');
 const lang = document.querySelector('.lang');
 const borders = document.querySelector('.borderClassAnchor');
+const body = document.querySelector('body');
+const themeChanger = document.querySelector('.themeNameChanger')
+
+themeChanger.addEventListener('click', () => {
+    body.classList.toggle('bodyData');
+    if (themeChanger.innerHTML === 'Dark Mode') {
+        themeChanger.innerHTML = 'Light Mode';
+    } else {
+        themeChanger.innerHTML = 'Dark Mode';
+    }
+})
+
 
 backBtn.addEventListener('click', () => {
     window.history.back(1);
