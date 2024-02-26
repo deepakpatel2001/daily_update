@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Details</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="country.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="heading">
+            <h2><a href="./index.html" class="apiHome">Where in the World!</a></h2>
+        </div>
+        <div class="dark-mode">
+            <p><span>&#x1F312;</span>Dark Mode</p>
+        </div>
+    </header>
+    <div>
+        <button class="back-button"><span class="arrowIcon">&larr;</span>Back</button>
+    </div>
+    <main class="all-Data">
+        <div class="parent-container">
+            <div class="image-country">
+                <img src="/" alt="">
+            </div>
+            <div class="all-details">
+                <h2 class="countryName"></h2>
+                <div class="namePopulation">
+                    <div class="leftContent">
+                        <p><b>Native Name:</b>&nbsp;<span class="native-name"></span></p>
+                        <p><b>Population:</b>&nbsp;<span class="population"></span></p>
+                        <p><b>Region:</b>&nbsp;<span class="region"></span></p>
+                        <p><b>Sub Region:</b>&nbsp;<span class="sub-region"></span></p>
+                        <p><b>Capital:</b>&nbsp;<span class="capital"></span></p>
+                    </div>
+                    <div class="rightContent">
+                        <p><b>Top level Domain:</b>&nbsp;<span class="tld"></span></p>
+                        <p><b>Currencies:</b>&nbsp;<span class="currencies"></span></p>
+                        <p><b>Languages:</b>&nbsp;<span class="lang"></p>
+                    </div>
+                </div>
+                <div class="borderCountry">
+                    <h2>Border Countries:</h2>
+                    <div class="borderClassAnchor"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
